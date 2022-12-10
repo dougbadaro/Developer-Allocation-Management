@@ -1,0 +1,12 @@
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\bin\Debug\Developer-Allocation-Management.exe.config
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\bin\Debug\Developer-Allocation-Management.exe
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\bin\Debug\Developer-Allocation-Management.pdb
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.AssemblyReference.cache
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.SuggestedBindingRedirects.cache
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.WindowHome.resources
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.WindowLogin.resources
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.Properties.Resources.resources
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.GenerateResource.cache
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.CoreCompileInputs.cache
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.exe
+C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.pdb
