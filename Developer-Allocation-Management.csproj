@@ -60,6 +60,12 @@
     <Compile Include="WindowHome.Designer.cs">
       <DependentUpon>WindowHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowRegisterDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowRegisterDev.Designer.cs">
+      <DependentUpon>WindowRegisterDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WindowRegisterDev.resx">
+      <DependentUpon>WindowRegisterDev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowReport.resx">
       <DependentUpon>WindowReport.cs</DependentUpon>
     </EmbeddedResource>

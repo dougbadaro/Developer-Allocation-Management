@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Developer_Allocation_Management
 {
-    public partial class Report : Form
+    public partial class WindowRegisterDev : Form
     {
-        public Report()
+        public WindowRegisterDev()
         {
             InitializeComponent();
         }

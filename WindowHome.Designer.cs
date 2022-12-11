@@ -35,6 +35,7 @@
             this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,19 +63,20 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // developerToolStripMenuItem
             // 
             this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerToolStripMenuItem,
+            this.registerProjectToolStripMenuItem,
             this.reportToolStripMenuItem});
             this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
             this.developerToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
@@ -84,13 +86,19 @@
             // 
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
             this.registerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registerToolStripMenuItem.Text = "Register";
+            this.registerToolStripMenuItem.Text = "Register Developer";
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // registerProjectToolStripMenuItem
+            // 
+            this.registerProjectToolStripMenuItem.Name = "registerProjectToolStripMenuItem";
+            this.registerProjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerProjectToolStripMenuItem.Text = "Register Project";
             // 
             // WindowHome
             // 
@@ -118,5 +126,6 @@
         private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerProjectToolStripMenuItem;
     }
 }
