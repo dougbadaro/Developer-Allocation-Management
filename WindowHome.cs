@@ -12,6 +12,16 @@ namespace Developer_Allocation_Management
 {
     public partial class WindowHome : Form
     {
+        private static WindowHome _instance;
+        public static WindowHome GetInstance()
+        {
+            if (_instance == null || _instance.IsDisposed)
+            {
+                _instance = new WindowHome();
+            }
+
+            return _instance;
+        }
         public WindowHome()
         {
             InitializeComponent();

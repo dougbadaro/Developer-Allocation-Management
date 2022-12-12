@@ -16,5 +16,19 @@ namespace Developer_Allocation_Management
         {
             InitializeComponent();
         }
+
+        private void WindowLogin_Load(object sender, EventArgs e)
+        {
+            Repository repository = new Repository();
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (Credencial.Authenticate(txtEmail.Text, txtSenha.Text))
+            {
+                WindowHome.GetInstance().Show();
+            }
+        }
+
     }
 }

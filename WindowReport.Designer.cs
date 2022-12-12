@@ -36,7 +36,7 @@
             // 
             this.dgvRegister.AllowUserToAddRows = false;
             this.dgvRegister.AllowUserToDeleteRows = false;
-            this.dgvRegister.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvRegister.BackgroundColor = System.Drawing.Color.White;
             this.dgvRegister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRegister.GridColor = System.Drawing.Color.DimGray;
