@@ -14,7 +14,7 @@ namespace Developer_Allocation_Management
         public String Name { get; set; }
         public DateTime BirthDay { get; set; }
         public Char Level { get; set; }
-        public Credencial Credencial { get; set; }
+        public Credential Credencial { get; set; }
 
         public Developer()
         {

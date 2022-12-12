@@ -64,7 +64,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // logoutToolStripMenuItem
@@ -72,6 +72,7 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // developerToolStripMenuItem
             // 
@@ -88,18 +89,21 @@
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
             this.registerToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.registerToolStripMenuItem.Text = "Register Developer";
+            this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // registerProjectToolStripMenuItem
             // 
             this.registerProjectToolStripMenuItem.Name = "registerProjectToolStripMenuItem";
             this.registerProjectToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.registerProjectToolStripMenuItem.Text = "Register Project";
+            this.registerProjectToolStripMenuItem.Click += new System.EventHandler(this.registerProjectToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // WindowHome
             // 
@@ -108,9 +112,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mnuHome);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuHome;
             this.Name = "WindowHome";
-            this.Text = "WindowHome";
+            this.Text = "Home";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WindowHome_FormClosed);
             this.mnuHome.ResumeLayout(false);
             this.mnuHome.PerformLayout();
             this.ResumeLayout(false);

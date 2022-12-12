@@ -12,6 +12,17 @@ namespace Developer_Allocation_Management
 {
     public partial class WindowRegisterProject : Form
     {
+        private static WindowRegisterProject _instance;
+        public static WindowRegisterProject GetInstance()
+        {
+            if (_instance == null || _instance.IsDisposed)
+            {
+                _instance = new WindowRegisterProject();
+            }
+
+            return _instance;
+        }
+
         public WindowRegisterProject()
         {
             InitializeComponent();

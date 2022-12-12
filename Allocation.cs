@@ -10,6 +10,7 @@ namespace Developer_Allocation_Management
     [Table("tbl_allocation")]
     internal class Allocation
     {
+        public Int64 Id { get; set; }
         public DateTime Start { get; set; }
         public DateTime Termination { get; set; }
         public Byte HoursWeekly { get; set; }

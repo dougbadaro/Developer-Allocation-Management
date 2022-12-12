@@ -10,9 +10,19 @@ using System.Windows.Forms;
 
 namespace Developer_Allocation_Management
 {
-    public partial class Report : Form
+    public partial class WindowReport : Form
     {
-        public Report()
+        private static WindowReport _instance;
+        public static WindowReport GetInstance()
+        {
+            if ( _instance == null || _instance.IsDisposed )
+            {
+                _instance = new WindowReport();
+            }
+
+            return _instance;
+        }
+        public WindowReport()
         {
             InitializeComponent();
         }

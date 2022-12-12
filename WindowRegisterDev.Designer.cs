@@ -272,7 +272,7 @@
             this.ClientSize = new System.Drawing.Size(514, 329);
             this.Controls.Add(this.pnlMain);
             this.Name = "WindowRegisterDev";
-            this.Text = "Cadastro de Desenvolvedores";
+            this.Text = "Developer Registration";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.pnlAdmin.ResumeLayout(false);

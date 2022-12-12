@@ -148,7 +148,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTitle);
             this.Name = "WindowRegisterProject";
-            this.Text = "WindowRegisterProject";
+            this.Text = "Project Registration";
             this.ResumeLayout(false);
             this.PerformLayout();
 

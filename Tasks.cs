@@ -10,8 +10,8 @@ namespace Developer_Allocation_Management
     [Table("tbl_tasks")]
     internal class Tasks
     {
+        public Int64 Id { get; set; }
         public String Description { get; set; }
-
         public Tasks(string description)
         {
             Description = description;

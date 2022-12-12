@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Allocation.cs" />
-    <Compile Include="Credencial.cs" />
+    <Compile Include="Credential.cs" />
     <Compile Include="Developer.cs" />
     <Compile Include="DeveloperRepository.cs" />
     <Compile Include="Project.cs" />

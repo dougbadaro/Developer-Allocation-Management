@@ -10,8 +10,8 @@ using System.Windows.Forms;
 
 namespace Developer_Allocation_Management
 {
-    [Table("tbl_Credencial")]
-    internal class Credencial
+    [Table("tbl_Credential")]
+    internal class Credential
     {
         public Int64 Id { get; set; }
         public const String SALT = "SysSalt";
@@ -41,11 +41,11 @@ namespace Developer_Allocation_Management
         [Required]
         public Developer Developer { get; set; }
 
-        public Credencial()
+        public Credential()
         {
         }
 
-        public Credencial(string email, string password, bool active, bool administrator)
+        public Credential(string email, string password, bool active, bool administrator)
         {
             Email = email;
             Password = password;

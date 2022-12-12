@@ -15,7 +15,10 @@ namespace Developer_Allocation_Management
         private static MySqlConnection _dbConnection;
 
         public DbSet<Developer> Developers { get; set; }
+        public DbSet<Credential> Credentials { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Allocation> Allocations { get; set; }
+        public DbSet<Tasks> Tasks { get; set; }
 
         public Repository() : base(GetConnection(), false)
         {
@@ -24,7 +27,7 @@ namespace Developer_Allocation_Management
 
                 Repository repository = this;
 
-                Credencial credencial = new Credencial("douglasbadaro@mail.com", "123456", true, true);
+                Credential credencial = new Credential("douglasbadaro@mail.com", "123456", true, true);
                 Developer developer = new Developer("Douglas Badaró", new DateTime(2006 - 01 - 14), Convert.ToChar("J"));
                 credencial.Developer = developer;
                 developer.Credencial = credencial;
