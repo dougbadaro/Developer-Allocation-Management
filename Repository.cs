@@ -28,7 +28,7 @@ namespace Developer_Allocation_Management
                 Repository repository = this;
 
                 Credential credencial = new Credential("douglasbadaro@mail.com", "123456", true, true);
-                Developer developer = new Developer("Douglas Badaró", new DateTime(2006 - 01 - 14), Convert.ToChar("J"));
+                Developer developer = new Developer("Douglas Badaró", new DateTime(2006 - 01 - 14), 'J');
                 credencial.Developer = developer;
                 developer.Credencial = credencial;
 

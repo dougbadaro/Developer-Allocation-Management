@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,9 @@ namespace Developer_Allocation_Management
     internal class Project
     {
         public Int64 Id { get; set; }
+
+        [Required]
+        [StringLength(35)]
         public String Name { get; set; }
         public DateTime Start { get; set; }
         public DateTime PlannedTerm { get; set; }

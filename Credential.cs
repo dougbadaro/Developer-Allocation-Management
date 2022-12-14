@@ -15,7 +15,11 @@ namespace Developer_Allocation_Management
     {
         public Int64 Id { get; set; }
         public const String SALT = "SysSalt";
+
+        [Required]
+        [StringLength(250)]
         public String Email { get; set; }
+
         private String _password;
         public String Password
         {
@@ -36,8 +40,8 @@ namespace Developer_Allocation_Management
                 }
             }
         }
-        public Boolean Active { get; set; }
-        public Boolean Administrator { get; set; }
+        public Boolean Active = false;
+        public Boolean Administrator = false;
         [Required]
         public Developer Developer { get; set; }
 
