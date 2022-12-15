@@ -11,4 +11,4 @@
 </div>
     
 ## Diagram
-<img src="assets/uml.png" alt="Class Diagram">
+<img src="assets/diagram.png" alt="Class Diagram">
