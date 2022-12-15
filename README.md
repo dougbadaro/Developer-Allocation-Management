@@ -1,5 +1,5 @@
 # Developer-Allocation-Management
 
-<video width="320" height="240" controls>
-  <source src="assets/softwareoperation" type="video/mp4">
-</video>
+<div align="center">
+    <img max-height="400em" src="assets/softwareoperation" alt="Software Operation">
+</div>
