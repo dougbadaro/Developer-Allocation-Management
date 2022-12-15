@@ -18,6 +18,7 @@ namespace Developer_Allocation_Management
         public String Name { get; set; }
         public DateTime Start { get; set; }
         public DateTime PlannedTerm { get; set; }
+
         public DateTime Termination { get; set; }
 
         public Project(string name, DateTime start, DateTime plannedTerm, DateTime termination)

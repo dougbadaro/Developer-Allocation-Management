@@ -16,7 +16,7 @@ namespace Developer_Allocation_Management
         public Int64 Id { get; set; }
         public const String SALT = "SysSalt";
 
-        [Required]
+        [Index(IsUnique = true)]
         [StringLength(250)]
         public String Email { get; set; }
 

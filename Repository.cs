@@ -33,6 +33,9 @@ namespace Developer_Allocation_Management
                 developer.Credencial = credencial;
 
                 repository.Developers.Add(developer);
+
+                Project project = new Project("Automação", new DateTime(2021-06-21), new DateTime(2022-12-23), new DateTime(2022-12-23));
+                repository.Projects.Add(project);
                 repository.SaveChanges();
             }
         }

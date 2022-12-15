@@ -39,12 +39,12 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.rbtYesActive = new System.Windows.Forms.RadioButton();
             this.rbtNoActive = new System.Windows.Forms.RadioButton();
             this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
             this.btnRegister = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.pnlAdmin = new System.Windows.Forms.Panel();
             this.rbtNoAdmin = new System.Windows.Forms.RadioButton();
             this.rbtYesAdmin = new System.Windows.Forms.RadioButton();
@@ -88,7 +88,7 @@
             // 
             this.lblLevel.AutoSize = true;
             this.lblLevel.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.Location = new System.Drawing.Point(150, 128);
+            this.lblLevel.Location = new System.Drawing.Point(150, 134);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(48, 18);
             this.lblLevel.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(142, 154);
+            this.lblEmail.Location = new System.Drawing.Point(142, 163);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 4;
@@ -108,7 +108,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(122, 180);
+            this.lblPassword.Location = new System.Drawing.Point(122, 189);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(76, 18);
             this.lblPassword.TabIndex = 5;
@@ -118,7 +118,7 @@
             // 
             this.lblActive.AutoSize = true;
             this.lblActive.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(143, 206);
+            this.lblActive.Location = new System.Drawing.Point(143, 215);
             this.lblActive.Name = "lblActive";
             this.lblActive.Size = new System.Drawing.Size(53, 18);
             this.lblActive.TabIndex = 6;
@@ -128,7 +128,7 @@
             // 
             this.lblAdministrator.AutoSize = true;
             this.lblAdministrator.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdministrator.Location = new System.Drawing.Point(96, 230);
+            this.lblAdministrator.Location = new System.Drawing.Point(96, 239);
             this.lblAdministrator.Name = "lblAdministrator";
             this.lblAdministrator.Size = new System.Drawing.Size(102, 18);
             this.lblAdministrator.TabIndex = 7;
@@ -139,28 +139,21 @@
             this.txtName.Location = new System.Drawing.Point(204, 71);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(156, 23);
-            this.txtName.TabIndex = 8;
+            this.txtName.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(204, 175);
+            this.txtPassword.Location = new System.Drawing.Point(204, 184);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(156, 23);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 4;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(204, 149);
+            this.txtEmail.Location = new System.Drawing.Point(204, 158);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(156, 23);
-            this.txtEmail.TabIndex = 12;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(204, 123);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(156, 23);
-            this.textBox6.TabIndex = 13;
+            this.txtEmail.TabIndex = 3;
             // 
             // rbtYesActive
             // 
@@ -168,7 +161,7 @@
             this.rbtYesActive.Location = new System.Drawing.Point(0, 3);
             this.rbtYesActive.Name = "rbtYesActive";
             this.rbtYesActive.Size = new System.Drawing.Size(51, 22);
-            this.rbtYesActive.TabIndex = 15;
+            this.rbtYesActive.TabIndex = 5;
             this.rbtYesActive.TabStop = true;
             this.rbtYesActive.Text = "Sim";
             this.rbtYesActive.UseVisualStyleBackColor = true;
@@ -179,7 +172,7 @@
             this.rbtNoActive.Location = new System.Drawing.Point(48, 3);
             this.rbtNoActive.Name = "rbtNoActive";
             this.rbtNoActive.Size = new System.Drawing.Size(53, 22);
-            this.rbtNoActive.TabIndex = 16;
+            this.rbtNoActive.TabIndex = 6;
             this.rbtNoActive.TabStop = true;
             this.rbtNoActive.Text = "Não";
             this.rbtNoActive.UseVisualStyleBackColor = true;
@@ -189,25 +182,27 @@
             this.dtpBirthDay.Location = new System.Drawing.Point(204, 97);
             this.dtpBirthDay.Name = "dtpBirthDay";
             this.dtpBirthDay.Size = new System.Drawing.Size(156, 23);
-            this.dtpBirthDay.TabIndex = 19;
+            this.dtpBirthDay.TabIndex = 1;
             // 
             // btnRegister
             // 
+            this.btnRegister.Enabled = false;
             this.btnRegister.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Location = new System.Drawing.Point(213, 274);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
-            this.btnRegister.TabIndex = 20;
+            this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.cbbLevel);
             this.pnlMain.Controls.Add(this.pnlAdmin);
             this.pnlMain.Controls.Add(this.pnlActive);
             this.pnlMain.Controls.Add(this.btnRegister);
             this.pnlMain.Controls.Add(this.dtpBirthDay);
-            this.pnlMain.Controls.Add(this.textBox6);
             this.pnlMain.Controls.Add(this.txtEmail);
             this.pnlMain.Controls.Add(this.txtPassword);
             this.pnlMain.Controls.Add(this.txtName);
@@ -225,11 +220,21 @@
             this.pnlMain.Size = new System.Drawing.Size(509, 324);
             this.pnlMain.TabIndex = 21;
             // 
+            // cbbLevel
+            // 
+            this.cbbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLevel.FormattingEnabled = true;
+            this.cbbLevel.Location = new System.Drawing.Point(204, 126);
+            this.cbbLevel.Name = "cbbLevel";
+            this.cbbLevel.Size = new System.Drawing.Size(156, 26);
+            this.cbbLevel.TabIndex = 2;
+            this.cbbLevel.SelectedIndexChanged += new System.EventHandler(this.cbbLevel_SelectedIndexChanged);
+            // 
             // pnlAdmin
             // 
             this.pnlAdmin.Controls.Add(this.rbtNoAdmin);
             this.pnlAdmin.Controls.Add(this.rbtYesAdmin);
-            this.pnlAdmin.Location = new System.Drawing.Point(204, 228);
+            this.pnlAdmin.Location = new System.Drawing.Point(204, 237);
             this.pnlAdmin.Name = "pnlAdmin";
             this.pnlAdmin.Size = new System.Drawing.Size(91, 23);
             this.pnlAdmin.TabIndex = 22;
@@ -240,7 +245,7 @@
             this.rbtNoAdmin.Location = new System.Drawing.Point(48, 0);
             this.rbtNoAdmin.Name = "rbtNoAdmin";
             this.rbtNoAdmin.Size = new System.Drawing.Size(53, 22);
-            this.rbtNoAdmin.TabIndex = 17;
+            this.rbtNoAdmin.TabIndex = 8;
             this.rbtNoAdmin.TabStop = true;
             this.rbtNoAdmin.Text = "Não";
             this.rbtNoAdmin.UseVisualStyleBackColor = true;
@@ -251,7 +256,7 @@
             this.rbtYesAdmin.Location = new System.Drawing.Point(0, 0);
             this.rbtYesAdmin.Name = "rbtYesAdmin";
             this.rbtYesAdmin.Size = new System.Drawing.Size(51, 22);
-            this.rbtYesAdmin.TabIndex = 17;
+            this.rbtYesAdmin.TabIndex = 7;
             this.rbtYesAdmin.TabStop = true;
             this.rbtYesAdmin.Text = "Sim";
             this.rbtYesAdmin.UseVisualStyleBackColor = true;
@@ -260,7 +265,7 @@
             // 
             this.pnlActive.Controls.Add(this.rbtNoActive);
             this.pnlActive.Controls.Add(this.rbtYesActive);
-            this.pnlActive.Location = new System.Drawing.Point(204, 202);
+            this.pnlActive.Location = new System.Drawing.Point(204, 211);
             this.pnlActive.Name = "pnlActive";
             this.pnlActive.Size = new System.Drawing.Size(92, 22);
             this.pnlActive.TabIndex = 21;
@@ -296,7 +301,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.RadioButton rbtYesActive;
         private System.Windows.Forms.RadioButton rbtNoActive;
         private System.Windows.Forms.DateTimePicker dtpBirthDay;
@@ -306,5 +310,6 @@
         private System.Windows.Forms.RadioButton rbtNoAdmin;
         private System.Windows.Forms.RadioButton rbtYesAdmin;
         private System.Windows.Forms.Panel pnlActive;
+        private System.Windows.Forms.ComboBox cbbLevel;
     }
 }
