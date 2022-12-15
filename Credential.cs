@@ -36,7 +36,7 @@ namespace Developer_Allocation_Management
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException("A senha deve conter de 8 a 12 caracteres");
+                    throw new ArgumentOutOfRangeException("Password must contain 8 to 12 characters.");
                 }
             }
         }
@@ -97,13 +97,13 @@ namespace Developer_Allocation_Management
                 }
                 else
                 {
-                    MessageBox.Show("Senha Incorreta!!!");
+                    MessageBox.Show("Incorrect Password!!!");
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("E-mail Incorreto!!!");
+                MessageBox.Show("Incorrect Email!!!");
                 return false;
             }
         }
