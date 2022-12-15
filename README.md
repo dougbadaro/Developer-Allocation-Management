@@ -9,3 +9,6 @@
 <div align="center">
     <img max-height="300px" src="assets/softwareoperation.gif" alt="Software Operation">
 </div>
+    
+## Diagram
+<img src="assets/uml.png" alt="Class Diagram">
