@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Developer_Allocation_Management
@@ -34,15 +27,25 @@ namespace Developer_Allocation_Management
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (Credential.Authenticate(txtEmail.Text, txtSenha.Text))
+            Developer developer = CredentialRepository.Authenticate(txtEmail.Text, txtSenha.Text);
+
+            if (developer == null)
+            {
+                MessageBox.Show("Incorrect email or password.");
+            }
+            else if (developer.Credential.Active == true)
             {
                 this.Hide();
 
-                WindowHome.GetInstance().Show();
-            }
+                WindowHome.GetInstance(developer).Show();
 
-            txtEmail.Text = null;
-            txtSenha.Text = null;
+                txtEmail.Text = null;
+                txtSenha.Text = null;
+            }
+            else
+            {
+                MessageBox.Show("Inactive user.");
+            }
         }
 
         private void txtEmail_KeyUp(object sender, KeyEventArgs e)

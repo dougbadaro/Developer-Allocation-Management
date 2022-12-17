@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Developer_Allocation_Management
 {
     [Table("tbl_Credential")]
-    internal class Credential
+    public class Credential
     {
         public Int64 Id { get; set; }
         public const String SALT = "SysSalt";
@@ -36,12 +36,12 @@ namespace Developer_Allocation_Management
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException("Password must contain 8 to 12 characters.");
+                    MessageBox.Show("Password must contain 6 to 12 characters.");
                 }
             }
         }
-        public Boolean Active = false;
-        public Boolean Administrator = false;
+        public Boolean Active { get; set; }
+        public Boolean Administrator { get; set; }
         [Required]
         public Developer Developer { get; set; }
 
@@ -81,31 +81,5 @@ namespace Developer_Allocation_Management
             return hash;
         }
         #endregion
-
-
-        public static Boolean Authenticate(String email, String password)
-        {
-            Developer developer = DeveloperRepository.AuthenticateDeveloper(email);
-
-            if (developer != null)
-            {
-                String passworddb = developer.Credencial.Password;
-
-                if (passworddb == ComputeSHA256(password, SALT))
-                {
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect Password!!!");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Incorrect Email!!!");
-                return false;
-            }
-        }
     }
 }

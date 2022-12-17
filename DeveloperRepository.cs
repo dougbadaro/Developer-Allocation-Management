@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Developer_Allocation_Management
 {
@@ -29,22 +30,7 @@ namespace Developer_Allocation_Management
             }
             catch (Exception)
             {
-                throw;
-            }
-        }
-
-        public static Developer AuthenticateDeveloper(String email)
-        {
-            try
-            {
-                using (Repository dbContext = new Repository())
-                {
-                    return dbContext.Developers.Include("Credencial").Where(d => d.Credencial.Email == email).FirstOrDefault();
-                }
-            }
-            catch (Exception)
-            {
-                throw;
+                MessageBox.Show("An unexpected error occurred.");
             }
         }
     }

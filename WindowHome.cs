@@ -12,19 +12,26 @@ namespace Developer_Allocation_Management
 {
     public partial class WindowHome : Form
     {
+        private WindowHome(Developer developer)
+        {
+            InitializeComponent();
+
+            if (developer.Credential.Administrator == true)
+            {
+                registerToolStripMenuItem.Visible = true;
+                registerProjectToolStripMenuItem.Visible = true;
+            }
+        }
+
         private static WindowHome _instance;
-        public static WindowHome GetInstance()
+        public static WindowHome GetInstance(Developer developer)
         {
             if (_instance == null || _instance.IsDisposed)
             {
-                _instance = new WindowHome();
+                _instance = new WindowHome(developer);
             }
 
             return _instance;
-        }
-        public WindowHome()
-        {
-            InitializeComponent();
         }
 
         private void WindowHome_FormClosed(object sender, FormClosedEventArgs e)

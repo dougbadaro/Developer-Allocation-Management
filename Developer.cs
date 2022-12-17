@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Developer_Allocation_Management
 {
     [Table("tbl_developer")]
-    internal class Developer
+    public class Developer
     {
         public Int64 Id { get; set; }
 
@@ -34,7 +34,7 @@ namespace Developer_Allocation_Management
             }
         }
 
-        public Credential Credencial { get; set; }
+        public Credential Credential { get; set; }
 
         public Developer()
         {

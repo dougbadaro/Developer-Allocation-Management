@@ -15,7 +15,7 @@ namespace Developer_Allocation_Management
         private static WindowRegisterDev _instance;
         public static WindowRegisterDev GetInstance()
         {
-            if ( _instance == null || _instance.IsDisposed )
+            if (_instance == null || _instance.IsDisposed)
             {
                 _instance = new WindowRegisterDev();
             }
@@ -34,50 +34,40 @@ namespace Developer_Allocation_Management
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Developer developer = new Developer();
-            developer.Name = txtName.Text;
-            developer.BirthDay = dtpBirthDay.Value;
-
-            if (cbbLevel.SelectedIndex == 1)
+            if (CredentialRepository.AuthenticateDataBase(txtEmail.Text) == null)
             {
-                developer.LetterLevel = 'J';
-                EnableButton();
+                if (txtPassword.Text.Length >= 6 && txtPassword.Text.Length <= 12)
+                {
+                    Developer developer = new Developer();
+                    developer.Name = txtName.Text;
+                    developer.BirthDay = dtpBirthDay.Value;
+
+                    SetLevel(developer);
+
+                    Credential credential = new Credential();
+                    credential.Email = txtEmail.Text;
+                    credential.Password = txtPassword.Text;
+                    credential.Active = rbtYesActive.Checked;
+                    credential.Administrator = rbtYesAdmin.Checked;
+
+                    credential.Developer = developer;
+                    developer.Credential = credential;
+
+                    DeveloperRepository.Save(developer);
+
+                    MessageBox.Show("Developer successfully registered!");
+
+                    CleanWindow();
+                }
+                else
+                {
+                    MessageBox.Show("The password must contain 6 to 12 characters.");
+                }
             }
-            if (cbbLevel.SelectedIndex == 2)
+            else
             {
-                developer.LetterLevel = 'P';
-                EnableButton();
+                MessageBox.Show("E-mail already registered.");
             }
-            if (cbbLevel.SelectedIndex == 3)
-            {
-                developer.LetterLevel = 'S';
-                EnableButton();
-            }
-
-            Credential credential = new Credential();
-            credential.Email= txtEmail.Text;
-            credential.Password= txtPassword.Text;
-            
-            if (rbtYesActive.Checked == true) credential.Active = true;
-            if (rbtNoActive.Checked == false) credential.Active = false;
-
-            if (rbtYesAdmin.Checked == true) credential.Administrator = true;
-            if (rbtNoAdmin.Checked == false) credential.Active = false;
-
-            credential.Developer = developer;
-            developer.Credencial = credential;
-
-            txtName.Text = null;
-            txtEmail.Text = null;
-            txtPassword.Text = null;
-            dtpBirthDay.Value = DateTime.Now;
-            cbbLevel.SelectedIndex = 0;
-            rbtNoActive.Checked = false;
-            rbtYesAdmin.Checked = false;
-            rbtYesActive.Checked = false;
-            rbtNoAdmin.Checked = false;
-
-            DeveloperRepository.Save(developer);
         }
 
         private void EnableButton()
@@ -98,6 +88,38 @@ namespace Developer_Allocation_Management
             }
             if (cbbLevel.SelectedIndex == 3)
             {
+                EnableButton();
+            }
+        }
+
+        public void CleanWindow()
+        {
+            txtName.Text = null;
+            txtEmail.Text = null;
+            txtPassword.Text = null;
+            dtpBirthDay.Value = DateTime.Now;
+            cbbLevel.SelectedIndex = 0;
+            rbtNoActive.Checked = false;
+            rbtYesAdmin.Checked = false;
+            rbtYesActive.Checked = false;
+            rbtNoAdmin.Checked = false;
+        }
+
+        public void SetLevel(Developer developer)
+        {
+            if (cbbLevel.SelectedIndex == 1)
+            {
+                developer.LetterLevel = 'J';
+                EnableButton();
+            }
+            if (cbbLevel.SelectedIndex == 2)
+            {
+                developer.LetterLevel = 'P';
+                EnableButton();
+            }
+            if (cbbLevel.SelectedIndex == 3)
+            {
+                developer.LetterLevel = 'S';
                 EnableButton();
             }
         }

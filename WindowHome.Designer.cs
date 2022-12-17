@@ -70,7 +70,7 @@
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -89,6 +89,7 @@
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
             this.registerToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.registerToolStripMenuItem.Text = "Register Developer";
+            this.registerToolStripMenuItem.Visible = false;
             this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // registerProjectToolStripMenuItem
@@ -96,6 +97,7 @@
             this.registerProjectToolStripMenuItem.Name = "registerProjectToolStripMenuItem";
             this.registerProjectToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.registerProjectToolStripMenuItem.Text = "Register Project";
+            this.registerProjectToolStripMenuItem.Visible = false;
             this.registerProjectToolStripMenuItem.Click += new System.EventHandler(this.registerProjectToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
