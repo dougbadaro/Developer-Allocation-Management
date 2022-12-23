@@ -30,6 +30,8 @@ namespace Developer_Allocation_Management
             cbbLevel.Items.Add("Júnior");
             cbbLevel.Items.Add("Pleno");
             cbbLevel.Items.Add("Sênior");
+
+            cbbLevel.SelectedIndex = 0;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -78,15 +80,7 @@ namespace Developer_Allocation_Management
         private void cbbLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnRegister.Enabled = false;
-            if (cbbLevel.SelectedIndex == 1)
-            {
-                EnableButton();
-            }
-            if (cbbLevel.SelectedIndex == 2)
-            {
-                EnableButton();
-            }
-            if (cbbLevel.SelectedIndex == 3)
+            if (cbbLevel.SelectedIndex != 0)
             {
                 EnableButton();
             }
