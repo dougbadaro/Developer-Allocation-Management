@@ -42,3 +42,47 @@ C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Manag
 C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.CopyComplete
 C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.exe
 C:\thisisbadaro\Programação\csharp\IFNMG\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.pdb
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\Developer-Allocation-Management.exe.config
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\Developer-Allocation-Management.exe
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\Developer-Allocation-Management.pdb
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\BouncyCastle.Crypto.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\EntityFramework.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\EntityFramework.SqlServer.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\Google.Protobuf.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\K4os.Compression.LZ4.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\K4os.Hash.xxHash.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\MySql.Data.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\MySql.Data.EntityFramework.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Buffers.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Memory.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Numerics.Vectors.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\ZstdNet.dll
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\BouncyCastle.Crypto.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\EntityFramework.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\EntityFramework.SqlServer.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\Google.Protobuf.pdb
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\Google.Protobuf.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\K4os.Compression.LZ4.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\K4os.Hash.xxHash.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\MySql.Data.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\MySql.Data.EntityFramework.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Buffers.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Memory.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Numerics.Vectors.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.AssemblyReference.cache
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.SuggestedBindingRedirects.cache
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.WindowHome.resources
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.WindowLogin.resources
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.Properties.Resources.resources
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.WindowRegisterDev.resources
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.WindowRegisterProject.resources
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer_Allocation_Management.WindowReport.resources
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.GenerateResource.cache
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.CoreCompileInputs.cache
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.csproj.CopyComplete
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.exe
+D:\IFNMG\Programação Visual\3Trimestre\Developer-Allocation-Management\obj\Debug\Developer-Allocation-Management.pdb

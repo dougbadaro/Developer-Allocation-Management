@@ -162,13 +162,13 @@
             this.rbtYesActive.Name = "rbtYesActive";
             this.rbtYesActive.Size = new System.Drawing.Size(51, 22);
             this.rbtYesActive.TabIndex = 5;
-            this.rbtYesActive.TabStop = true;
             this.rbtYesActive.Text = "Sim";
             this.rbtYesActive.UseVisualStyleBackColor = true;
             // 
             // rbtNoActive
             // 
             this.rbtNoActive.AutoSize = true;
+            this.rbtNoActive.Checked = true;
             this.rbtNoActive.Location = new System.Drawing.Point(48, 3);
             this.rbtNoActive.Name = "rbtNoActive";
             this.rbtNoActive.Size = new System.Drawing.Size(53, 22);
@@ -242,6 +242,7 @@
             // rbtNoAdmin
             // 
             this.rbtNoAdmin.AutoSize = true;
+            this.rbtNoAdmin.Checked = true;
             this.rbtNoAdmin.Location = new System.Drawing.Point(48, 0);
             this.rbtNoAdmin.Name = "rbtNoAdmin";
             this.rbtNoAdmin.Size = new System.Drawing.Size(53, 22);
@@ -257,7 +258,6 @@
             this.rbtYesAdmin.Name = "rbtYesAdmin";
             this.rbtYesAdmin.Size = new System.Drawing.Size(51, 22);
             this.rbtYesAdmin.TabIndex = 7;
-            this.rbtYesAdmin.TabStop = true;
             this.rbtYesAdmin.Text = "Sim";
             this.rbtYesAdmin.UseVisualStyleBackColor = true;
             // 

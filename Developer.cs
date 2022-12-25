@@ -35,6 +35,7 @@ namespace Developer_Allocation_Management
         }
 
         public Credential Credential { get; set; }
+        public List<Allocation> Allocations { get; set; }
 
         public Developer()
         {

@@ -20,6 +20,7 @@ namespace Developer_Allocation_Management
         public DateTime PlannedTerm { get; set; }
 
         public DateTime Termination { get; set; }
+        public List<Allocation> Allocations { get; set; }
 
         public Project(string name, DateTime start, DateTime plannedTerm, DateTime termination)
         {

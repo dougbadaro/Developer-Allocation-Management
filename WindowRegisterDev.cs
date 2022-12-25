@@ -36,39 +36,46 @@ namespace Developer_Allocation_Management
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (CredentialRepository.AuthenticateDataBase(txtEmail.Text) == null)
+            if (txtName.Text != "" && txtEmail.Text != "" && txtPassword.Text != "")
             {
-                if (txtPassword.Text.Length >= 6 && txtPassword.Text.Length <= 12)
+                if (CredentialRepository.AuthenticateDataBase(txtEmail.Text) == null)
                 {
-                    Developer developer = new Developer();
-                    developer.Name = txtName.Text;
-                    developer.BirthDay = dtpBirthDay.Value;
+                    if (txtPassword.Text.Length >= 6 && txtPassword.Text.Length <= 12)
+                    {
+                        Developer developer = new Developer();
+                        developer.Name = txtName.Text;
+                        developer.BirthDay = dtpBirthDay.Value;
 
-                    SetLevel(developer);
+                        SetLevel(developer);
 
-                    Credential credential = new Credential();
-                    credential.Email = txtEmail.Text;
-                    credential.Password = txtPassword.Text;
-                    credential.Active = rbtYesActive.Checked;
-                    credential.Administrator = rbtYesAdmin.Checked;
+                        Credential credential = new Credential();
+                        credential.Email = txtEmail.Text;
+                        credential.Password = txtPassword.Text;
+                        credential.Active = rbtYesActive.Checked;
+                        credential.Administrator = rbtYesAdmin.Checked;
 
-                    credential.Developer = developer;
-                    developer.Credential = credential;
+                        credential.Developer = developer;
+                        developer.Credential = credential;
 
-                    DeveloperRepository.Save(developer);
+                        DeveloperRepository.Save(developer);
 
-                    MessageBox.Show("Developer successfully registered!");
+                        MessageBox.Show("Developer successfully registered!");
 
-                    CleanWindow();
+                        CleanWindow();
+                    }
+                    else
+                    {
+                        MessageBox.Show("The password must contain 6 to 12 characters.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("The password must contain 6 to 12 characters.");
+                    MessageBox.Show("Email unavailable.");
                 }
             }
             else
             {
-                MessageBox.Show("E-mail already registered.");
+                MessageBox.Show("Preencha os campos");
             }
         }
 

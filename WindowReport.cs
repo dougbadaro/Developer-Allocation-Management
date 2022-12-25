@@ -15,7 +15,7 @@ namespace Developer_Allocation_Management
         private static WindowReport _instance;
         public static WindowReport GetInstance()
         {
-            if ( _instance == null || _instance.IsDisposed )
+            if (_instance == null || _instance.IsDisposed)
             {
                 _instance = new WindowReport();
             }
