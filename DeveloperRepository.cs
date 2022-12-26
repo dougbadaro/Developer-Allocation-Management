@@ -33,5 +33,20 @@ namespace Developer_Allocation_Management
                 MessageBox.Show("An unexpected error occurred.");
             }
         }
+
+        public static List<Developer> FindAll()
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Developers.Include("Credential").ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

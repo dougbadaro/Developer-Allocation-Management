@@ -68,6 +68,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(186, 23);
             this.txtEmail.TabIndex = 0;
+            this.txtEmail.Text = "douglasbadaro@mail.com";
             this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
             // 
             // btnEntrar
@@ -90,6 +91,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(186, 23);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.Text = "123456";
             this.txtSenha.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyUp);
             // 
             // lblSenha

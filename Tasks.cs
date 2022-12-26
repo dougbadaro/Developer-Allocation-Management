@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Developer_Allocation_Management
 {
     [Table("tbl_tasks")]
-    internal class Tasks
+    public class Tasks
     {
         public Int64 Id { get; set; }
 

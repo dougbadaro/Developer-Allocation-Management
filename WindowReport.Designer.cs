@@ -33,8 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pnlSelect = new System.Windows.Forms.Panel();
-            this.rbtnDeveloper = new System.Windows.Forms.RadioButton();
             this.rbtnProject = new System.Windows.Forms.RadioButton();
+            this.rbtnDeveloper = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.pnlSelect.SuspendLayout();
             this.SuspendLayout();
@@ -86,17 +86,6 @@
             this.pnlSelect.Size = new System.Drawing.Size(136, 53);
             this.pnlSelect.TabIndex = 4;
             // 
-            // rbtnDeveloper
-            // 
-            this.rbtnDeveloper.AutoSize = true;
-            this.rbtnDeveloper.Location = new System.Drawing.Point(3, 3);
-            this.rbtnDeveloper.Name = "rbtnDeveloper";
-            this.rbtnDeveloper.Size = new System.Drawing.Size(79, 17);
-            this.rbtnDeveloper.TabIndex = 0;
-            this.rbtnDeveloper.TabStop = true;
-            this.rbtnDeveloper.Text = "Developers";
-            this.rbtnDeveloper.UseVisualStyleBackColor = true;
-            // 
             // rbtnProject
             // 
             this.rbtnProject.AutoSize = true;
@@ -107,6 +96,19 @@
             this.rbtnProject.TabStop = true;
             this.rbtnProject.Text = "Projects";
             this.rbtnProject.UseVisualStyleBackColor = true;
+            this.rbtnProject.CheckedChanged += new System.EventHandler(this.rbtnProject_CheckedChanged);
+            // 
+            // rbtnDeveloper
+            // 
+            this.rbtnDeveloper.AutoSize = true;
+            this.rbtnDeveloper.Location = new System.Drawing.Point(3, 3);
+            this.rbtnDeveloper.Name = "rbtnDeveloper";
+            this.rbtnDeveloper.Size = new System.Drawing.Size(79, 17);
+            this.rbtnDeveloper.TabIndex = 0;
+            this.rbtnDeveloper.TabStop = true;
+            this.rbtnDeveloper.Text = "Developers";
+            this.rbtnDeveloper.UseVisualStyleBackColor = true;
+            this.rbtnDeveloper.CheckedChanged += new System.EventHandler(this.rbtnDeveloper_CheckedChanged);
             // 
             // WindowReport
             // 

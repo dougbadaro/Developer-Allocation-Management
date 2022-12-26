@@ -22,9 +22,22 @@ namespace Developer_Allocation_Management
 
             return _instance;
         }
+
+        //private List<Developer> developers = DeveloperRepository.FindAll();
         public WindowReport()
         {
             InitializeComponent();
+        }
+
+        private void rbtnDeveloper_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvSearch.DataSource = DeveloperRepository.FindAll();
+
+        }
+
+        private void rbtnProject_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvSearch.DataSource = ProjectRepository.FindAll();
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Developer_Allocation_Management
 {
     [Table("tbl_project")]
-    internal class Project
+    public class Project
     {
         public Int64 Id { get; set; }
 
@@ -20,6 +20,7 @@ namespace Developer_Allocation_Management
         public DateTime PlannedTerm { get; set; }
 
         public DateTime Termination { get; set; }
+        [NotMapped]
         public List<Allocation> Allocations { get; set; }
 
         public Project(string name, DateTime start, DateTime plannedTerm, DateTime termination)

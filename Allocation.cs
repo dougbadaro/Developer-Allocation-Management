@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Developer_Allocation_Management
 {
     [Table("tbl_allocation")]
-    internal class Allocation
+    public class Allocation
     {
         public Int64 Id { get; set; }
         public DateTime Start { get; set; }
@@ -19,7 +19,7 @@ namespace Developer_Allocation_Management
         public Project Project { get; set; }
         public List<Tasks> Tasks { get; set; }
 
-        public Allocation(DateTime start, DateTime termination, byte hoursWeekly, decimal remuneration, Developer developer, Project project)
+        public Allocation (DateTime start, DateTime termination, byte hoursWeekly, decimal remuneration, Developer developer, Project project)
         {
             Start = start;
             Termination = termination;
