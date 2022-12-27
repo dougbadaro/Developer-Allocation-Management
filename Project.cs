@@ -23,6 +23,10 @@ namespace Developer_Allocation_Management
         [NotMapped]
         public List<Allocation> Allocations { get; set; }
 
+        public Project()
+        {
+        }
+
         public Project(string name, DateTime start, DateTime plannedTerm, DateTime termination)
         {
             Name = name;

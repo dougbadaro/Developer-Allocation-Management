@@ -18,8 +18,9 @@ namespace Developer_Allocation_Management
 
             if (developer.Credential.Administrator == true)
             {
-                registerToolStripMenuItem.Visible = true;
-                registerProjectToolStripMenuItem.Visible = true;
+                developerToolStripMenuItem.Visible = true;
+                projectToolStripMenuItem.Visible = true;
+                allocationToolStripMenuItem.Visible = true;
             }
         }
 
@@ -45,7 +46,6 @@ namespace Developer_Allocation_Management
 
             WindowLogin.GetInstance().Show();
         }
-
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowRegisterDev windowRegisterDev = WindowRegisterDev.GetInstance();
@@ -53,16 +53,14 @@ namespace Developer_Allocation_Management
             windowRegisterDev.WindowState = FormWindowState.Normal;
             windowRegisterDev.Show();
         }
-
-        private void registerProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        private void registerProjectToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WindowRegisterProject windowRegisterProject = WindowRegisterProject.GetInstance();
             windowRegisterProject.MdiParent = this;
             windowRegisterProject.WindowState = FormWindowState.Normal;
             windowRegisterProject.Show();
         }
-
-        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reportToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             WindowReport windowReport = WindowReport.GetInstance();
             windowReport.MdiParent = this;

@@ -44,7 +44,7 @@ namespace Developer_Allocation_Management
                     {
                         Developer developer = new Developer();
                         developer.Name = txtName.Text;
-                        developer.BirthDay = dtpBirthDay.Value;
+                        developer.BirthDay = dtpBirthDay.Value.Date;
 
                         SetLevel(developer);
 
@@ -75,7 +75,7 @@ namespace Developer_Allocation_Management
             }
             else
             {
-                MessageBox.Show("Preencha os campos");
+                MessageBox.Show("Fill in the fields.");
             }
         }
 

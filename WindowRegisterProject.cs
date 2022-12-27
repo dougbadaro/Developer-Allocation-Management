@@ -27,5 +27,29 @@ namespace Developer_Allocation_Management
         {
             InitializeComponent();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text != "")
+            {
+                Project project = new Project(txtName.Text, dtpStart.Value.Date, dtpPlannedTerm.Value.Date, dtpTermination.Value.Date);
+                
+                ProjectRepository.Save(project);
+                ClearFields();
+                MessageBox.Show("Project registered successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Fill in the fields.");
+            }
+        }
+
+        public void ClearFields()
+        {
+            txtName.Text = "";
+            dtpStart.Value = DateTime.Now;
+            dtpPlannedTerm.Value = DateTime.Now;
+            dtpTermination.Value = DateTime.Now;
+        }
     }
 }

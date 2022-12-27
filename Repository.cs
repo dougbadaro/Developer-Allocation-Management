@@ -28,14 +28,18 @@ namespace Developer_Allocation_Management
                 Repository repository = this;
 
                 Credential credencial = new Credential("douglasbadaro@mail.com", "123456", true, true);
-                Developer developer = new Developer("Douglas Badaró", new DateTime(2006 - 01 - 14), 'J');
+                Developer developer = new Developer("Douglas Badaró", DateTime.Parse("2006 - 01 - 14"), 'J');
                 credencial.Developer = developer;
                 developer.Credential = credencial;
 
                 repository.Developers.Add(developer);
 
-                Project project = new Project("Automação", new DateTime(2021-06-21), new DateTime(2022-12-23), new DateTime(2022-12-23));
+                Project project = new Project("Automação", DateTime.Parse("2021-06-21"), DateTime.Parse("2022-12-23"), DateTime.Parse("2022-12-23"));
                 repository.Projects.Add(project);
+
+                Allocation allocation = new Allocation(DateTime.Parse("2021-06-21"), DateTime.Parse("2022-12-23"), 8, 160.0m, developer, project);
+                repository.Allocations.Add(allocation);
+
                 repository.SaveChanges();
             }
         }

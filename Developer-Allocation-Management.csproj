@@ -121,6 +121,12 @@
     <Compile Include="WindowHome.Designer.cs">
       <DependentUpon>WindowHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowRegisterAlloc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowRegisterAlloc.Designer.cs">
+      <DependentUpon>WindowRegisterAlloc.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowRegisterDev.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WindowRegisterAlloc.resx">
+      <DependentUpon>WindowRegisterAlloc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowRegisterDev.resx">
       <DependentUpon>WindowRegisterDev.cs</DependentUpon>
     </EmbeddedResource>
