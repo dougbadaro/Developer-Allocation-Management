@@ -36,9 +36,9 @@
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerProjectToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.allocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerAllocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHome.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,13 +112,6 @@
             this.registerProjectToolStripMenuItem1.Text = "Register Project";
             this.registerProjectToolStripMenuItem1.Click += new System.EventHandler(this.registerProjectToolStripMenuItem1_Click);
             // 
-            // reportToolStripMenuItem1
-            // 
-            this.reportToolStripMenuItem1.Name = "reportToolStripMenuItem1";
-            this.reportToolStripMenuItem1.Size = new System.Drawing.Size(64, 22);
-            this.reportToolStripMenuItem1.Text = "Report";
-            this.reportToolStripMenuItem1.Click += new System.EventHandler(this.reportToolStripMenuItem1_Click);
-            // 
             // allocationToolStripMenuItem
             // 
             this.allocationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -133,6 +126,14 @@
             this.registerAllocationToolStripMenuItem.Name = "registerAllocationToolStripMenuItem";
             this.registerAllocationToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.registerAllocationToolStripMenuItem.Text = "Register Allocation";
+            this.registerAllocationToolStripMenuItem.Click += new System.EventHandler(this.registerAllocationToolStripMenuItem_Click);
+            // 
+            // reportToolStripMenuItem1
+            // 
+            this.reportToolStripMenuItem1.Name = "reportToolStripMenuItem1";
+            this.reportToolStripMenuItem1.Size = new System.Drawing.Size(64, 22);
+            this.reportToolStripMenuItem1.Text = "Report";
+            this.reportToolStripMenuItem1.Click += new System.EventHandler(this.reportToolStripMenuItem1_Click);
             // 
             // WindowHome
             // 

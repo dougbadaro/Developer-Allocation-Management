@@ -48,5 +48,10 @@ namespace Developer_Allocation_Management
             BirthDay = birthDay;
             LetterLevel = letterLevel;
         }
+
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }

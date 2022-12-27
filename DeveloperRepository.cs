@@ -48,5 +48,20 @@ namespace Developer_Allocation_Management
                 throw;
             }
         }
+
+        public static List<Developer> FindByPartialName(String partialName)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Developers.Where(d => d.Name.Contains(partialName)).ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

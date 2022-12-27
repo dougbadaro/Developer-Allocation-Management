@@ -67,5 +67,13 @@ namespace Developer_Allocation_Management
             windowReport.WindowState = FormWindowState.Normal;
             windowReport.Show();
         }
+
+        private void registerAllocationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowRegisterAlloc windowRegisterAlloc = WindowRegisterAlloc.GetInstance();
+            windowRegisterAlloc.MdiParent = this;
+            windowRegisterAlloc.WindowState = FormWindowState.Normal;
+            windowRegisterAlloc.Show();
+        }
     }
 }

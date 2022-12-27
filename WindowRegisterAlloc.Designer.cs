@@ -73,6 +73,7 @@
             this.txtDeveloper.Name = "txtDeveloper";
             this.txtDeveloper.Size = new System.Drawing.Size(100, 20);
             this.txtDeveloper.TabIndex = 2;
+            this.txtDeveloper.TextChanged += new System.EventHandler(this.txtDeveloper_TextChanged);
             // 
             // txtProject
             // 
@@ -80,6 +81,7 @@
             this.txtProject.Name = "txtProject";
             this.txtProject.Size = new System.Drawing.Size(100, 20);
             this.txtProject.TabIndex = 3;
+            this.txtProject.TextChanged += new System.EventHandler(this.txtProject_TextChanged);
             // 
             // dtpStart
             // 
@@ -148,6 +150,7 @@
             this.txtRemuneration.Name = "txtRemuneration";
             this.txtRemuneration.Size = new System.Drawing.Size(145, 20);
             this.txtRemuneration.TabIndex = 11;
+            this.txtRemuneration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRemuneration_KeyPress);
             // 
             // btnRegister
             // 
@@ -158,6 +161,7 @@
             this.btnRegister.TabIndex = 12;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lstDevelopers
             // 

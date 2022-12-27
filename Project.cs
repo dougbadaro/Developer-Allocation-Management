@@ -34,5 +34,10 @@ namespace Developer_Allocation_Management
             PlannedTerm = plannedTerm;
             Termination = termination;
         }
+
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }
