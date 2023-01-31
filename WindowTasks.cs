@@ -64,17 +64,24 @@ namespace Developer_Allocation_Management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Allocation allocation = (Allocation)lstAllocation.SelectedItem;
-            Task task = new Task(txtTask.Text, allocation);
-            TaskRepository.Save(task);
+            if (txtTask.Text != "")
+            {
+                Allocation allocation = (Allocation)lstAllocation.SelectedItem;
+                Task task = new Task(txtTask.Text);
+                AllocationRepository.AddTask(allocation, task);
 
-            lstTask.DataSource = TaskRepository.FindByAllocation(allocation.Id);
+                lstTask.DataSource = AllocationRepository.GetTasks(allocation.Id);
+            }
+            else
+            {
+                MessageBox.Show("Enter a description for your task.");
+            }
         }
 
         private void lstAllocation_SelectedIndexChanged(object sender, EventArgs e)
         {
             Allocation allocation = (Allocation)lstAllocation.SelectedItem;
-            lstTask.DataSource = TaskRepository.FindByAllocation(allocation.Id);
+            lstTask.DataSource = AllocationRepository.GetTasks(allocation.Id);
         }
     }
 }

@@ -41,6 +41,23 @@ namespace Developer_Allocation_Management
                 throw;
             }
         }
+        public static void AddTask(Allocation allocation, Task task)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    Allocation allocationDB = dbContext.Allocations.FirstOrDefault(a => a.Id == allocation.Id);
+                    allocationDB.Tasks.Add(task);
+
+                    dbContext.SaveChanges();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public static Allocation FindById(Int64 allocation)
         {
             try
@@ -70,6 +87,22 @@ namespace Developer_Allocation_Management
                 }
             }
             catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static List<Task> GetTasks(Int64 id)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    Allocation allocation = dbContext.Allocations.Include(a => a.Tasks).FirstOrDefault(a => a.Id == id);
+
+                    return allocation.Tasks.ToList();
+                }
+            }
+            catch
             {
                 throw;
             }

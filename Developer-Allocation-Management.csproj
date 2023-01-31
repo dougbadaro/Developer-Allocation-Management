@@ -107,7 +107,6 @@
     <Compile Include="Project.cs" />
     <Compile Include="ProjectRepository.cs" />
     <Compile Include="Repository.cs" />
-    <Compile Include="TaskRepository.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="WindowLogin.cs">
       <SubType>Form</SubType>

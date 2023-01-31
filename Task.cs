@@ -15,12 +15,11 @@ namespace Developer_Allocation_Management
 
         [StringLength(200)]
         public String Description { get; set; }
-        public Allocation Allocation { get; set; }
+        //public Allocation Allocation { get; set; }
         public Task() { }
-        public Task(string description, Allocation allocation)
+        public Task(string description)
         {
             Description = description;
-            Allocation = allocation;
         }
 
         public override string ToString()
