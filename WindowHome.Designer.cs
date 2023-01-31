@@ -38,15 +38,15 @@
             this.registerProjectToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.allocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerAllocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuHome
             // 
             this.mnuHome.BackColor = System.Drawing.Color.DimGray;
-            this.mnuHome.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.developerToolStripMenuItem,
@@ -56,7 +56,7 @@
             this.reportToolStripMenuItem1});
             this.mnuHome.Location = new System.Drawing.Point(0, 0);
             this.mnuHome.Name = "mnuHome";
-            this.mnuHome.Size = new System.Drawing.Size(800, 26);
+            this.mnuHome.Size = new System.Drawing.Size(800, 24);
             this.mnuHome.TabIndex = 0;
             this.mnuHome.Text = "menuStrip1";
             // 
@@ -66,19 +66,19 @@
             this.aboutToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(42, 22);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -87,14 +87,14 @@
             this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerToolStripMenuItem});
             this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.developerToolStripMenuItem.Text = "Developer";
             this.developerToolStripMenuItem.Visible = false;
             // 
             // registerToolStripMenuItem
             // 
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            this.registerToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.registerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.registerToolStripMenuItem.Text = "Register Developer";
             this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
@@ -103,14 +103,14 @@
             this.projectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerProjectToolStripMenuItem1});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(66, 22);
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.projectToolStripMenuItem.Text = "Project";
             this.projectToolStripMenuItem.Visible = false;
             // 
             // registerProjectToolStripMenuItem1
             // 
             this.registerProjectToolStripMenuItem1.Name = "registerProjectToolStripMenuItem1";
-            this.registerProjectToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
+            this.registerProjectToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.registerProjectToolStripMenuItem1.Text = "Register Project";
             this.registerProjectToolStripMenuItem1.Click += new System.EventHandler(this.registerProjectToolStripMenuItem1_Click);
             // 
@@ -119,30 +119,30 @@
             this.allocationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerAllocationToolStripMenuItem});
             this.allocationToolStripMenuItem.Name = "allocationToolStripMenuItem";
-            this.allocationToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
+            this.allocationToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.allocationToolStripMenuItem.Text = "Allocation";
             this.allocationToolStripMenuItem.Visible = false;
             // 
             // registerAllocationToolStripMenuItem
             // 
             this.registerAllocationToolStripMenuItem.Name = "registerAllocationToolStripMenuItem";
-            this.registerAllocationToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.registerAllocationToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.registerAllocationToolStripMenuItem.Text = "Register Allocation";
             this.registerAllocationToolStripMenuItem.Click += new System.EventHandler(this.registerAllocationToolStripMenuItem_Click);
-            // 
-            // reportToolStripMenuItem1
-            // 
-            this.reportToolStripMenuItem1.Name = "reportToolStripMenuItem1";
-            this.reportToolStripMenuItem1.Size = new System.Drawing.Size(64, 22);
-            this.reportToolStripMenuItem1.Text = "Report";
-            this.reportToolStripMenuItem1.Click += new System.EventHandler(this.reportToolStripMenuItem1_Click);
             // 
             // tasksToolStripMenuItem
             // 
             this.tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
-            this.tasksToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
+            this.tasksToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.tasksToolStripMenuItem.Text = "Tasks";
             this.tasksToolStripMenuItem.Click += new System.EventHandler(this.tasksToolStripMenuItem_Click);
+            // 
+            // reportToolStripMenuItem1
+            // 
+            this.reportToolStripMenuItem1.Name = "reportToolStripMenuItem1";
+            this.reportToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
+            this.reportToolStripMenuItem1.Text = "Report";
+            this.reportToolStripMenuItem1.Click += new System.EventHandler(this.reportToolStripMenuItem1_Click);
             // 
             // WindowHome
             // 
@@ -151,8 +151,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mnuHome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuHome;
+            this.MaximizeBox = false;
             this.Name = "WindowHome";
             this.Text = "Home";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WindowHome_FormClosed);

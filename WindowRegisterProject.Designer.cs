@@ -43,88 +43,88 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Montserrat Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(151, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(220, 26);
+            this.lblTitle.Size = new System.Drawing.Size(191, 24);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Project Registration";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(164, 95);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(55, 18);
+            this.lblName.Size = new System.Drawing.Size(50, 16);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name: ";
             // 
             // lblStart
             // 
             this.lblStart.AutoSize = true;
-            this.lblStart.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStart.Location = new System.Drawing.Point(174, 122);
             this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(45, 18);
+            this.lblStart.Size = new System.Drawing.Size(40, 16);
             this.lblStart.TabIndex = 2;
             this.lblStart.Text = "Start: ";
             // 
             // lblPlannedTerm
             // 
             this.lblPlannedTerm.AutoSize = true;
-            this.lblPlannedTerm.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlannedTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlannedTerm.Location = new System.Drawing.Point(70, 148);
             this.lblPlannedTerm.Name = "lblPlannedTerm";
-            this.lblPlannedTerm.Size = new System.Drawing.Size(149, 18);
+            this.lblPlannedTerm.Size = new System.Drawing.Size(131, 16);
             this.lblPlannedTerm.TabIndex = 3;
             this.lblPlannedTerm.Text = "Planned termination: ";
             // 
             // lblTermination
             // 
             this.lblTermination.AutoSize = true;
-            this.lblTermination.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTermination.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTermination.Location = new System.Drawing.Point(127, 174);
             this.lblTermination.Name = "lblTermination";
-            this.lblTermination.Size = new System.Drawing.Size(92, 18);
+            this.lblTermination.Size = new System.Drawing.Size(84, 16);
             this.lblTermination.TabIndex = 4;
             this.lblTermination.Text = "Termination: ";
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(225, 93);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 5;
             // 
             // dtpStart
             // 
-            this.dtpStart.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStart.Location = new System.Drawing.Point(225, 119);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(200, 23);
+            this.dtpStart.Size = new System.Drawing.Size(200, 22);
             this.dtpStart.TabIndex = 6;
             // 
             // dtpPlannedTerm
             // 
-            this.dtpPlannedTerm.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPlannedTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpPlannedTerm.Location = new System.Drawing.Point(225, 145);
             this.dtpPlannedTerm.Name = "dtpPlannedTerm";
-            this.dtpPlannedTerm.Size = new System.Drawing.Size(200, 23);
+            this.dtpPlannedTerm.Size = new System.Drawing.Size(200, 22);
             this.dtpPlannedTerm.TabIndex = 7;
             // 
             // dtpTermination
             // 
-            this.dtpTermination.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTermination.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTermination.Location = new System.Drawing.Point(225, 171);
             this.dtpTermination.Name = "dtpTermination";
-            this.dtpTermination.Size = new System.Drawing.Size(200, 23);
+            this.dtpTermination.Size = new System.Drawing.Size(200, 22);
             this.dtpTermination.TabIndex = 8;
             // 
             // btnRegister
             // 
-            this.btnRegister.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Location = new System.Drawing.Point(209, 224);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
@@ -148,6 +148,8 @@
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "WindowRegisterProject";
             this.Text = "Project Registration";
             this.ResumeLayout(false);

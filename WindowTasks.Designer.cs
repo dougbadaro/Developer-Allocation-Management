@@ -126,6 +126,8 @@
             this.Controls.Add(this.lstAllocation);
             this.Controls.Add(this.lblDeveloper);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "WindowTasks";
             this.Text = "WindowTasks";
             this.ResumeLayout(false);

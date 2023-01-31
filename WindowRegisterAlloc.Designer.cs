@@ -210,6 +210,8 @@
             this.Controls.Add(this.txtDeveloper);
             this.Controls.Add(this.lblProject);
             this.Controls.Add(this.lblDeveloper);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "WindowRegisterAlloc";
             this.Text = "WindowRegisterAlloc";
             ((System.ComponentModel.ISupportInitialize)(this.nmrHours)).EndInit();
