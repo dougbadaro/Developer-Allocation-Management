@@ -41,6 +41,20 @@ namespace Developer_Allocation_Management
                 throw;
             }
         }
+        public static List<Allocation> FindAll()
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Allocations.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public static void AddTask(Allocation allocation, Task task)
         {
             try

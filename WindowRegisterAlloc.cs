@@ -25,32 +25,56 @@ namespace Developer_Allocation_Management
 
             return _instance;
         }
-        public WindowRegisterAlloc()
+        private WindowRegisterAlloc()
         {
             InitializeComponent();
         }
 
         private void txtDeveloper_TextChanged(object sender, EventArgs e)
         {
-            if (txtDeveloper.Text != "")
-            {
-                lstDevelopers.DataSource = DeveloperRepository.FindByPartialName(txtDeveloper.Text);
-            }
+            lstDevelopers.DataSource = DeveloperRepository.FindByPartialName(txtDeveloper.Text);
         }
 
         private void txtProject_TextChanged(object sender, EventArgs e)
         {
-            if (txtProject.Text != "")
-            {
-                lstProjects.DataSource = ProjectRepository.FindByPartialName(txtProject.Text);
-            }
+            lstProjects.DataSource = ProjectRepository.FindByPartialName(txtProject.Text);
         }
 
         private void txtRemuneration_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            string currentText = txtRemuneration.Text;
+            int cursorPosition = txtRemuneration.SelectionStart;
+            int decimalPointIndex = currentText.IndexOf('.');
+            int commaIndex = currentText.IndexOf(',');
+            int lastDigitIndex = -1;
+
+            for (int i = cursorPosition - 1; i >= 0; i--)
+            {
+                if (Char.IsDigit(currentText[i]))
+                {
+                    lastDigitIndex = i;
+                    break;
+                }
+            }
+
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ',' && e.KeyChar != '.')
             {
                 e.Handled = true;
+            }
+            else if (e.KeyChar == ',' || e.KeyChar == '.')
+            {
+                if (lastDigitIndex == -1 && cursorPosition == 0)
+                {
+                    e.Handled = true;
+                }
+                else if (decimalPointIndex != -1 || commaIndex != -1)
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    e.KeyChar = '.';
+                }
             }
         }
 
@@ -58,7 +82,7 @@ namespace Developer_Allocation_Management
         {
             if (lstDevelopers.SelectedIndex >= 0 && lstProjects.SelectedIndex >= 0)
             {
-                if (nmrHours.Value > 0 && txtRemuneration.Text != "")
+                if (nmrHours.Value > 0 && txtRemuneration.Text != string.Empty)
                 {
                     Developer dev = (Developer)lstDevelopers.SelectedItem;
                     Project proj = (Project)lstProjects.SelectedItem;
@@ -92,28 +116,14 @@ namespace Developer_Allocation_Management
             }
         }
 
-        private void txtRemuneration_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
-
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-
-        }
-
         private void Clear()
         {
-            txtDeveloper.Text = "";
-            txtProject.Text = "";
+            txtDeveloper.Text = string.Empty;
+            txtProject.Text = string.Empty;
             dtpStart.Value = DateTime.Now;
             dtpTermination.Value = DateTime.Now;
             nmrHours.Value = 1;
-            txtRemuneration.Text = "";
+            txtRemuneration.Text = string.Empty;
             lstDevelopers.DataSource = null;
             lstProjects.DataSource = null;
         }

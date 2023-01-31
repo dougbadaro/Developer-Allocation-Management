@@ -22,8 +22,7 @@ namespace Developer_Allocation_Management
 
             return _instance;
         }
-
-        public WindowRegisterProject()
+        private WindowRegisterProject()
         {
             InitializeComponent();
         }
@@ -44,7 +43,7 @@ namespace Developer_Allocation_Management
             }
         }
 
-        public void ClearFields()
+        private void ClearFields()
         {
             txtName.Text = "";
             dtpStart.Value = DateTime.Now;

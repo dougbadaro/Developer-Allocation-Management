@@ -22,7 +22,7 @@ namespace Developer_Allocation_Management
 
             return _instance;
         }
-        public WindowRegisterDev()
+        private WindowRegisterDev()
         {
             InitializeComponent();
 
@@ -40,32 +40,36 @@ namespace Developer_Allocation_Management
             {
                 if (CredentialRepository.AuthenticateDataBase(txtEmail.Text) == null)
                 {
-                    if (txtPassword.Text.Length >= 6 && txtPassword.Text.Length <= 12)
+                    try
                     {
-                        Developer developer = new Developer();
-                        developer.Name = txtName.Text;
-                        developer.BirthDay = dtpBirthDay.Value.Date;
+                        if (txtPassword.Text.Length >= 6 && txtPassword.Text.Length <= 12)
+                        {
+                            Developer developer = new Developer();
+                            developer.Name = txtName.Text;
+                            developer.BirthDay = dtpBirthDay.Value.Date;
 
-                        SetLevel(developer);
+                            SetLevel(developer);
 
-                        Credential credential = new Credential();
-                        credential.Email = txtEmail.Text;
-                        credential.Password = txtPassword.Text;
-                        credential.Active = rbtYesActive.Checked;
-                        credential.Administrator = rbtYesAdmin.Checked;
+                            Credential credential = new Credential();
+                            credential.Email = txtEmail.Text;
+                            credential.Password = txtPassword.Text;
+                            credential.Active = chkActive.Checked;
+                            credential.Administrator = chkAdmin.Checked;
 
-                        credential.Developer = developer;
-                        developer.Credential = credential;
+                            credential.Developer = developer;
+                            developer.Credential = credential;
 
-                        DeveloperRepository.Save(developer);
+                            DeveloperRepository.Save(developer);
 
-                        MessageBox.Show("Developer successfully registered!");
+                            MessageBox.Show("Developer successfully registered!");
 
-                        CleanWindow();
+                            CleanWindow();
+                        }
                     }
-                    else
+                    catch (Exception)
                     {
                         MessageBox.Show("The password must contain 6 to 12 characters.");
+                        throw;
                     }
                 }
                 else
@@ -93,20 +97,18 @@ namespace Developer_Allocation_Management
             }
         }
 
-        public void CleanWindow()
+        private void CleanWindow()
         {
             txtName.Text = null;
             txtEmail.Text = null;
             txtPassword.Text = null;
             dtpBirthDay.Value = DateTime.Now;
             cbbLevel.SelectedIndex = 0;
-            rbtNoActive.Checked = false;
-            rbtYesAdmin.Checked = false;
-            rbtYesActive.Checked = false;
-            rbtNoAdmin.Checked = false;
+            chkActive.Checked = false;
+            chkAdmin.Checked = false;
         }
 
-        public void SetLevel(Developer developer)
+        private void SetLevel(Developer developer)
         {
             if (cbbLevel.SelectedIndex == 1)
             {

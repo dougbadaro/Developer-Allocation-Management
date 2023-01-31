@@ -187,7 +187,7 @@
             this.txtRemuneration.Name = "txtRemuneration";
             this.txtRemuneration.Size = new System.Drawing.Size(145, 20);
             this.txtRemuneration.TabIndex = 16;
-            this.txtRemuneration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRemuneration_KeyPress_1);
+            this.txtRemuneration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRemuneration_KeyPress);
             // 
             // WindowRegisterAlloc
             // 

@@ -35,6 +35,8 @@
             this.pnlSelect = new System.Windows.Forms.Panel();
             this.rbtnProject = new System.Windows.Forms.RadioButton();
             this.rbtnDeveloper = new System.Windows.Forms.RadioButton();
+            this.rdbAllocation = new System.Windows.Forms.RadioButton();
+            this.rdbTasks = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.pnlSelect.SuspendLayout();
             this.SuspendLayout();
@@ -79,11 +81,13 @@
             // 
             // pnlSelect
             // 
+            this.pnlSelect.Controls.Add(this.rdbTasks);
+            this.pnlSelect.Controls.Add(this.rdbAllocation);
             this.pnlSelect.Controls.Add(this.rbtnProject);
             this.pnlSelect.Controls.Add(this.rbtnDeveloper);
-            this.pnlSelect.Location = new System.Drawing.Point(652, 76);
+            this.pnlSelect.Location = new System.Drawing.Point(584, 76);
             this.pnlSelect.Name = "pnlSelect";
-            this.pnlSelect.Size = new System.Drawing.Size(136, 53);
+            this.pnlSelect.Size = new System.Drawing.Size(204, 53);
             this.pnlSelect.TabIndex = 4;
             // 
             // rbtnProject
@@ -109,6 +113,29 @@
             this.rbtnDeveloper.Text = "Developers";
             this.rbtnDeveloper.UseVisualStyleBackColor = true;
             this.rbtnDeveloper.CheckedChanged += new System.EventHandler(this.rbtnDeveloper_CheckedChanged);
+            // 
+            // rdbAllocation
+            // 
+            this.rdbAllocation.AutoSize = true;
+            this.rdbAllocation.Location = new System.Drawing.Point(104, 3);
+            this.rdbAllocation.Name = "rdbAllocation";
+            this.rdbAllocation.Size = new System.Drawing.Size(71, 17);
+            this.rdbAllocation.TabIndex = 2;
+            this.rdbAllocation.TabStop = true;
+            this.rdbAllocation.Text = "Allocation";
+            this.rdbAllocation.UseVisualStyleBackColor = true;
+            this.rdbAllocation.CheckedChanged += new System.EventHandler(this.rdbAllocation_CheckedChanged);
+            // 
+            // rdbTasks
+            // 
+            this.rdbTasks.AutoSize = true;
+            this.rdbTasks.Location = new System.Drawing.Point(104, 26);
+            this.rdbTasks.Name = "rdbTasks";
+            this.rdbTasks.Size = new System.Drawing.Size(54, 17);
+            this.rdbTasks.TabIndex = 3;
+            this.rdbTasks.TabStop = true;
+            this.rdbTasks.Text = "Tasks";
+            this.rdbTasks.UseVisualStyleBackColor = true;
             // 
             // WindowReport
             // 
@@ -141,5 +168,7 @@
         private System.Windows.Forms.Panel pnlSelect;
         private System.Windows.Forms.RadioButton rbtnProject;
         private System.Windows.Forms.RadioButton rbtnDeveloper;
+        private System.Windows.Forms.RadioButton rdbTasks;
+        private System.Windows.Forms.RadioButton rdbAllocation;
     }
 }

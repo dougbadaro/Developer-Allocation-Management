@@ -31,6 +31,7 @@ namespace Developer_Allocation_Management
             catch (Exception)
             {
                 MessageBox.Show("An unexpected error occurred.");
+                throw;
             }
         }
 

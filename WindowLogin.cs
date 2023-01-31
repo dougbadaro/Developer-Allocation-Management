@@ -15,7 +15,7 @@ namespace Developer_Allocation_Management
 
             return _instance;
         }
-        public WindowLogin()
+        private WindowLogin()
         {
             InitializeComponent();
         }

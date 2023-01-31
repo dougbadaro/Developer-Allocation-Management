@@ -14,14 +14,12 @@ namespace Developer_Allocation_Management
     {
         private static WindowTasks _instance;
         private Boolean _preAllocation = false;
-        public WindowTasks()
+        private WindowTasks()
         {
             InitializeComponent();
         }
-        public WindowTasks(Allocation createdAllocation)
+        private WindowTasks(Allocation createdAllocation) : this()
         {
-            InitializeComponent();
-
             _preAllocation = true;
             txtAllocation.Text = $"{createdAllocation.Id}";
 
@@ -52,7 +50,7 @@ namespace Developer_Allocation_Management
 
         private void txtAllocation_TextChanged(object sender, EventArgs e)
         {
-            if (_preAllocation == false)
+            if (!_preAllocation)
             {
                 lstAllocation.DataSource = AllocationRepository.FindByDevProj(txtAllocation.Text);
             }
@@ -64,13 +62,14 @@ namespace Developer_Allocation_Management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtTask.Text != "")
+            if (!string.IsNullOrEmpty(txtAllocation.Text))
             {
                 Allocation allocation = (Allocation)lstAllocation.SelectedItem;
                 Task task = new Task(txtTask.Text);
                 AllocationRepository.AddTask(allocation, task);
 
                 lstTask.DataSource = AllocationRepository.GetTasks(allocation.Id);
+                txtTask.Text = string.Empty;
             }
             else
             {

@@ -39,19 +39,13 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.rbtYesActive = new System.Windows.Forms.RadioButton();
-            this.rbtNoActive = new System.Windows.Forms.RadioButton();
             this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
             this.btnRegister = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.cbbLevel = new System.Windows.Forms.ComboBox();
-            this.pnlAdmin = new System.Windows.Forms.Panel();
-            this.rbtNoAdmin = new System.Windows.Forms.RadioButton();
-            this.rbtYesAdmin = new System.Windows.Forms.RadioButton();
-            this.pnlActive = new System.Windows.Forms.Panel();
+            this.chkActive = new System.Windows.Forms.CheckBox();
+            this.chkAdmin = new System.Windows.Forms.CheckBox();
             this.pnlMain.SuspendLayout();
-            this.pnlAdmin.SuspendLayout();
-            this.pnlActive.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -155,28 +149,6 @@
             this.txtEmail.Size = new System.Drawing.Size(156, 22);
             this.txtEmail.TabIndex = 3;
             // 
-            // rbtYesActive
-            // 
-            this.rbtYesActive.AutoSize = true;
-            this.rbtYesActive.Location = new System.Drawing.Point(0, 3);
-            this.rbtYesActive.Name = "rbtYesActive";
-            this.rbtYesActive.Size = new System.Drawing.Size(48, 20);
-            this.rbtYesActive.TabIndex = 5;
-            this.rbtYesActive.Text = "Sim";
-            this.rbtYesActive.UseVisualStyleBackColor = true;
-            // 
-            // rbtNoActive
-            // 
-            this.rbtNoActive.AutoSize = true;
-            this.rbtNoActive.Checked = true;
-            this.rbtNoActive.Location = new System.Drawing.Point(48, 3);
-            this.rbtNoActive.Name = "rbtNoActive";
-            this.rbtNoActive.Size = new System.Drawing.Size(51, 20);
-            this.rbtNoActive.TabIndex = 6;
-            this.rbtNoActive.TabStop = true;
-            this.rbtNoActive.Text = "Não";
-            this.rbtNoActive.UseVisualStyleBackColor = true;
-            // 
             // dtpBirthDay
             // 
             this.dtpBirthDay.Location = new System.Drawing.Point(204, 97);
@@ -198,9 +170,9 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.chkAdmin);
+            this.pnlMain.Controls.Add(this.chkActive);
             this.pnlMain.Controls.Add(this.cbbLevel);
-            this.pnlMain.Controls.Add(this.pnlAdmin);
-            this.pnlMain.Controls.Add(this.pnlActive);
             this.pnlMain.Controls.Add(this.btnRegister);
             this.pnlMain.Controls.Add(this.dtpBirthDay);
             this.pnlMain.Controls.Add(this.txtEmail);
@@ -230,45 +202,23 @@
             this.cbbLevel.TabIndex = 2;
             this.cbbLevel.SelectedIndexChanged += new System.EventHandler(this.cbbLevel_SelectedIndexChanged);
             // 
-            // pnlAdmin
+            // chkActive
             // 
-            this.pnlAdmin.Controls.Add(this.rbtNoAdmin);
-            this.pnlAdmin.Controls.Add(this.rbtYesAdmin);
-            this.pnlAdmin.Location = new System.Drawing.Point(204, 237);
-            this.pnlAdmin.Name = "pnlAdmin";
-            this.pnlAdmin.Size = new System.Drawing.Size(91, 23);
-            this.pnlAdmin.TabIndex = 22;
+            this.chkActive.AutoSize = true;
+            this.chkActive.Location = new System.Drawing.Point(204, 217);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.Size = new System.Drawing.Size(15, 14);
+            this.chkActive.TabIndex = 10;
+            this.chkActive.UseVisualStyleBackColor = true;
             // 
-            // rbtNoAdmin
+            // chkAdmin
             // 
-            this.rbtNoAdmin.AutoSize = true;
-            this.rbtNoAdmin.Checked = true;
-            this.rbtNoAdmin.Location = new System.Drawing.Point(48, 0);
-            this.rbtNoAdmin.Name = "rbtNoAdmin";
-            this.rbtNoAdmin.Size = new System.Drawing.Size(51, 20);
-            this.rbtNoAdmin.TabIndex = 8;
-            this.rbtNoAdmin.TabStop = true;
-            this.rbtNoAdmin.Text = "Não";
-            this.rbtNoAdmin.UseVisualStyleBackColor = true;
-            // 
-            // rbtYesAdmin
-            // 
-            this.rbtYesAdmin.AutoSize = true;
-            this.rbtYesAdmin.Location = new System.Drawing.Point(0, 0);
-            this.rbtYesAdmin.Name = "rbtYesAdmin";
-            this.rbtYesAdmin.Size = new System.Drawing.Size(48, 20);
-            this.rbtYesAdmin.TabIndex = 7;
-            this.rbtYesAdmin.Text = "Sim";
-            this.rbtYesAdmin.UseVisualStyleBackColor = true;
-            // 
-            // pnlActive
-            // 
-            this.pnlActive.Controls.Add(this.rbtNoActive);
-            this.pnlActive.Controls.Add(this.rbtYesActive);
-            this.pnlActive.Location = new System.Drawing.Point(204, 211);
-            this.pnlActive.Name = "pnlActive";
-            this.pnlActive.Size = new System.Drawing.Size(92, 22);
-            this.pnlActive.TabIndex = 21;
+            this.chkAdmin.AutoSize = true;
+            this.chkAdmin.Location = new System.Drawing.Point(204, 241);
+            this.chkAdmin.Name = "chkAdmin";
+            this.chkAdmin.Size = new System.Drawing.Size(15, 14);
+            this.chkAdmin.TabIndex = 11;
+            this.chkAdmin.UseVisualStyleBackColor = true;
             // 
             // WindowRegisterDev
             // 
@@ -282,10 +232,6 @@
             this.Text = "Developer Registration";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
-            this.pnlAdmin.ResumeLayout(false);
-            this.pnlAdmin.PerformLayout();
-            this.pnlActive.ResumeLayout(false);
-            this.pnlActive.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -303,15 +249,11 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.RadioButton rbtYesActive;
-        private System.Windows.Forms.RadioButton rbtNoActive;
         private System.Windows.Forms.DateTimePicker dtpBirthDay;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Panel pnlAdmin;
-        private System.Windows.Forms.RadioButton rbtNoAdmin;
-        private System.Windows.Forms.RadioButton rbtYesAdmin;
-        private System.Windows.Forms.Panel pnlActive;
         private System.Windows.Forms.ComboBox cbbLevel;
+        private System.Windows.Forms.CheckBox chkAdmin;
+        private System.Windows.Forms.CheckBox chkActive;
     }
 }
