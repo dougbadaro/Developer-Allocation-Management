@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Allocation.cs" />
+    <Compile Include="AllocationRepository.cs" />
     <Compile Include="Credential.cs" />
     <Compile Include="CredentialRepository.cs" />
     <Compile Include="Developer.cs" />
@@ -106,7 +107,8 @@
     <Compile Include="Project.cs" />
     <Compile Include="ProjectRepository.cs" />
     <Compile Include="Repository.cs" />
-    <Compile Include="Tasks.cs" />
+    <Compile Include="TaskRepository.cs" />
+    <Compile Include="Task.cs" />
     <Compile Include="WindowLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +147,12 @@
     <Compile Include="WindowReport.Designer.cs">
       <DependentUpon>WindowReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowTasks.Designer.cs">
+      <DependentUpon>WindowTasks.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="WindowHome.resx">
       <DependentUpon>WindowHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowReport.resx">
       <DependentUpon>WindowReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowTasks.resx">
+      <DependentUpon>WindowTasks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -39,6 +39,7 @@
             this.allocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerAllocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHome.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.developerToolStripMenuItem,
             this.projectToolStripMenuItem,
             this.allocationToolStripMenuItem,
+            this.tasksToolStripMenuItem,
             this.reportToolStripMenuItem1});
             this.mnuHome.Location = new System.Drawing.Point(0, 0);
             this.mnuHome.Name = "mnuHome";
@@ -135,6 +137,13 @@
             this.reportToolStripMenuItem1.Text = "Report";
             this.reportToolStripMenuItem1.Click += new System.EventHandler(this.reportToolStripMenuItem1_Click);
             // 
+            // tasksToolStripMenuItem
+            // 
+            this.tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
+            this.tasksToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
+            this.tasksToolStripMenuItem.Text = "Tasks";
+            this.tasksToolStripMenuItem.Click += new System.EventHandler(this.tasksToolStripMenuItem_Click);
+            // 
             // WindowHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,5 +176,6 @@
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem allocationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerAllocationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tasksToolStripMenuItem;
     }
 }

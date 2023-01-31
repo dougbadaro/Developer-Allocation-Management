@@ -35,11 +35,11 @@ namespace Developer_Allocation_Management
         }
 
         public Credential Credential { get; set; }
-        [NotMapped]
         public List<Allocation> Allocations { get; set; }
 
         public Developer()
         {
+            Allocations = new List<Allocation>();
         }
 
         public Developer(string name, DateTime birthDay, char letterLevel)
@@ -51,6 +51,7 @@ namespace Developer_Allocation_Management
 
         public override string ToString()
         {
+
             return $"{Name}";
         }
     }

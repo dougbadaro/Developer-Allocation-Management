@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,10 +36,6 @@ namespace Developer_Allocation_Management
             {
                 lstDevelopers.DataSource = DeveloperRepository.FindByPartialName(txtDeveloper.Text);
             }
-            else
-            {
-                lstDevelopers.Items.Clear();
-            }
         }
 
         private void txtProject_TextChanged(object sender, EventArgs e)
@@ -45,10 +43,6 @@ namespace Developer_Allocation_Management
             if (txtProject.Text != "")
             {
                 lstProjects.DataSource = ProjectRepository.FindByPartialName(txtProject.Text);
-            }
-            else
-            {
-                lstProjects.Items.Clear();
             }
         }
 
@@ -62,7 +56,66 @@ namespace Developer_Allocation_Management
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Allocation allocation = new Allocation(dtpStart.Value.Date, dtpTermination.Value.Date, Convert.ToByte(nmrHours.Value), Convert.ToDecimal(txtRemuneration.Text), (Developer) lstDevelopers.SelectedItem, (Project) lstProjects.SelectedItem);
+            if (lstDevelopers.SelectedIndex >= 0 && lstProjects.SelectedIndex >= 0)
+            {
+                if (nmrHours.Value > 0 && txtRemuneration.Text != "")
+                {
+                    Developer dev = (Developer)lstDevelopers.SelectedItem;
+                    Project proj = (Project)lstProjects.SelectedItem;
+
+                    Allocation allocation = new Allocation(dtpStart.Value.Date, dtpTermination.Value.Date, Convert.ToByte(nmrHours.Value), Convert.ToDecimal(txtRemuneration.Text), dev, proj);
+
+                    AllocationRepository.Save(allocation);
+                    Sucesseful_AddTask(sender, e, allocation);
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Fill in all fields.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select a developer and project.");
+            }
+        }
+        private void Sucesseful_AddTask(object sender, EventArgs e, Allocation createdAllocation)
+        {
+            DialogResult result = MessageBox.Show("Allocation added, want to add Tasks?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                WindowTasks windowTasks = WindowTasks.GetInstance(createdAllocation);
+                windowTasks.MdiParent = this.MdiParent;
+                windowTasks.WindowState = FormWindowState.Normal;
+                windowTasks.Show();
+                this.Close();
+            }
+        }
+
+        private void txtRemuneration_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void Clear()
+        {
+            txtDeveloper.Text = "";
+            txtProject.Text = "";
+            dtpStart.Value = DateTime.Now;
+            dtpTermination.Value = DateTime.Now;
+            nmrHours.Value = 1;
+            txtRemuneration.Text = "";
+            lstDevelopers.DataSource = null;
+            lstProjects.DataSource = null;
         }
     }
 }

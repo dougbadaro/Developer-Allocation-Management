@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,18 @@ namespace Developer_Allocation_Management
         public DateTime Termination { get; set; }
         public Byte HoursWeekly { get; set; }
         public Decimal Remuneration { get; set; }
+        [Required]
         public Developer Developer { get; set; }
+        [Required]
         public Project Project { get; set; }
-        public List<Tasks> Tasks { get; set; }
+        public List<Task> Tasks { get; set; }
 
-        public Allocation (DateTime start, DateTime termination, byte hoursWeekly, decimal remuneration, Developer developer, Project project)
+        public Allocation()
+        {
+            Tasks = new List<Task>();
+        }
+
+        public Allocation (DateTime start, DateTime termination, byte hoursWeekly, decimal remuneration, Developer developer, Project project) : this()
         {
             Start = start;
             Termination = termination;
@@ -27,6 +35,11 @@ namespace Developer_Allocation_Management
             Remuneration = remuneration;
             Developer = developer;
             Project = project;
+        }
+
+        public override string ToString()
+        {
+            return $"{Developer}/{Project}";
         }
     }
 }

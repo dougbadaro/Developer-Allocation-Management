@@ -22,7 +22,7 @@ namespace Developer_Allocation_Management
 
         private void WindowLogin_Load(object sender, EventArgs e)
         {
-            Repository repository = new Repository();
+            //Repository repository = new Repository();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

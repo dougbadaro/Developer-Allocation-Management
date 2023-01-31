@@ -17,6 +17,7 @@ namespace Developer_Allocation_Management
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(WindowLogin.GetInstance());
+
         }
     }
 }

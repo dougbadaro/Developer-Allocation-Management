@@ -20,11 +20,11 @@ namespace Developer_Allocation_Management
         public DateTime PlannedTerm { get; set; }
 
         public DateTime Termination { get; set; }
-        [NotMapped]
         public List<Allocation> Allocations { get; set; }
 
         public Project()
         {
+            Allocations = new List<Allocation>();
         }
 
         public Project(string name, DateTime start, DateTime plannedTerm, DateTime termination)

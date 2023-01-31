@@ -18,7 +18,7 @@ namespace Developer_Allocation_Management
         public DbSet<Credential> Credentials { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Allocation> Allocations { get; set; }
-        public DbSet<Tasks> Tasks { get; set; }
+        public DbSet<Task> Tasks { get; set; }
 
         public Repository() : base(GetConnection(), false)
         {
