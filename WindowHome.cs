@@ -83,5 +83,13 @@ namespace Developer_Allocation_Management
             windowTasks.WindowState = FormWindowState.Normal;
             windowTasks.Show();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowAbout windowAbout = WindowAbout.GetInstance();
+            windowAbout.MdiParent = this;
+            windowAbout.WindowState = FormWindowState.Normal;
+            windowAbout.Show();
+        }
     }
 }

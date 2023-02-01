@@ -108,6 +108,12 @@
     <Compile Include="ProjectRepository.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Task.cs" />
+    <Compile Include="WindowAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowAbout.Designer.cs">
+      <DependentUpon>WindowAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     <Compile Include="WindowTasks.Designer.cs">
       <DependentUpon>WindowTasks.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WindowAbout.resx">
+      <DependentUpon>WindowAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowHome.resx">
       <DependentUpon>WindowHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +175,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="WindowRegisterAlloc.resx">
       <DependentUpon>WindowRegisterAlloc.cs</DependentUpon>
@@ -195,6 +205,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\imgAbout.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
