@@ -7,7 +7,7 @@
 <br>
 
 <div align="center">
-    <img max-height="300px" src="assets/softwareoperation.gif" alt="Software Operation">
+    <p>Projeto desenvolvido com o intuito de validação de aprendizado, utilizado .NET Framework para seu desenvolvimento, ministrado pelo Professor Guisso.</p>
 </div>
     
 ## Diagram
