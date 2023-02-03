@@ -6,6 +6,7 @@ namespace Developer_Allocation_Management
     public partial class WindowLogin : Form
     {
         private static WindowLogin _instance;
+        public static Developer developer;
         public static WindowLogin GetInstance()
         {
             if (_instance == null || _instance.IsDisposed)
@@ -20,14 +21,9 @@ namespace Developer_Allocation_Management
             InitializeComponent();
         }
 
-        private void WindowLogin_Load(object sender, EventArgs e)
-        {
-            //Repository repository = new Repository();
-        }
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Developer developer = CredentialRepository.Authenticate(txtEmail.Text, txtSenha.Text);
+            developer = CredentialRepository.Authenticate(txtEmail.Text, txtSenha.Text);
 
             if (developer == null)
             {

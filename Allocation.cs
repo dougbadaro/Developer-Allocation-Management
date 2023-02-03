@@ -39,7 +39,7 @@ namespace Developer_Allocation_Management
 
         public override string ToString()
         {
-            return $"{Developer}/{Project}";
+            return $"{Developer}, Start: {Start.ToString("dd-MM-yyyy")}";
         }
     }
 }

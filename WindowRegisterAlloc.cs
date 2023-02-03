@@ -15,6 +15,7 @@ namespace Developer_Allocation_Management
     public partial class WindowRegisterAlloc : Form
     {
         private static WindowRegisterAlloc _instance;
+        private Boolean _exist = false;
 
         public static WindowRegisterAlloc GetInstance()
         {
@@ -30,14 +31,14 @@ namespace Developer_Allocation_Management
             InitializeComponent();
         }
 
-        private void txtDeveloper_TextChanged(object sender, EventArgs e)
-        {
-            lstDevelopers.DataSource = DeveloperRepository.FindByPartialName(txtDeveloper.Text);
-        }
-
         private void txtProject_TextChanged(object sender, EventArgs e)
         {
-            lstProjects.DataSource = ProjectRepository.FindByPartialName(txtProject.Text);
+            lstProject.DataSource = ProjectRepository.FindByPartialName(txtProject.Text);
+        }
+
+        private void txtDeveloper_TextChanged(object sender, EventArgs e)
+        {
+            lstDeveloper.DataSource = DeveloperRepository.FindByPartialName(txtDeveloper.Text);
         }
 
         private void txtRemuneration_KeyPress(object sender, KeyPressEventArgs e)
@@ -80,18 +81,34 @@ namespace Developer_Allocation_Management
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (lstDevelopers.SelectedIndex >= 0 && lstProjects.SelectedIndex >= 0)
+            if (lstProject.SelectedIndex >= 0 && lstDeveloper.SelectedIndex >= 0)
             {
                 if (nmrHours.Value > 0 && txtRemuneration.Text != string.Empty)
                 {
-                    Developer dev = (Developer)lstDevelopers.SelectedItem;
-                    Project proj = (Project)lstProjects.SelectedItem;
+                    Developer dev = (Developer)lstDeveloper.SelectedItem;
+                    Project proj = (Project)lstProject.SelectedItem;
 
                     Allocation allocation = new Allocation(dtpStart.Value.Date, dtpTermination.Value.Date, Convert.ToByte(nmrHours.Value), Convert.ToDecimal(txtRemuneration.Text), dev, proj);
 
-                    AllocationRepository.Save(allocation);
-                    Sucesseful_AddTask(sender, e, allocation);
-                    Clear();
+                    List<Allocation> allocations = AllocationRepository.FindForDate((Project)lstProject.SelectedItem, (Developer)lstDeveloper.SelectedItem);
+                    foreach(Allocation findAllocation in allocations)
+                    {
+                        if (findAllocation.Termination.Date >= dtpStart.Value.Date && dtpTermination.Value.Date <= findAllocation.Start.Date)
+                        {
+                            _exist = true;
+                        }
+                    }
+                    if (_exist == false)
+                    {
+                        AllocationRepository.Save(allocation);
+                        Sucesseful_AddTask(sender, e, allocation);
+                        Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("There is already an allocation in progress.");
+                    }
+                    
                 }
                 else
                 {
@@ -118,14 +135,14 @@ namespace Developer_Allocation_Management
 
         private void Clear()
         {
-            txtDeveloper.Text = string.Empty;
             txtProject.Text = string.Empty;
+            txtDeveloper.Text = string.Empty;
             dtpStart.Value = DateTime.Now;
             dtpTermination.Value = DateTime.Now;
             nmrHours.Value = 1;
             txtRemuneration.Text = string.Empty;
-            lstDevelopers.DataSource = null;
-            lstProjects.DataSource = null;
+            lstProject.DataSource = null;
+            lstDeveloper.DataSource = null;
         }
     }
 }

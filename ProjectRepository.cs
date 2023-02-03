@@ -47,7 +47,6 @@ namespace Developer_Allocation_Management
                 throw;
             }
         }
-
         public static List<Project> FindByPartialName(string partialName)
         {
             try

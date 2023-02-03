@@ -21,6 +21,8 @@ namespace Developer_Allocation_Management
                 developerToolStripMenuItem.Visible = true;
                 projectToolStripMenuItem.Visible = true;
                 allocationToolStripMenuItem.Visible = true;
+                reportToolStripMenuItem.Visible = true;
+                registerTaskToolStripMenuItem.Visible = true;
             }
         }
 
@@ -76,7 +78,39 @@ namespace Developer_Allocation_Management
             windowRegisterAlloc.Show();
         }
 
-        private void tasksToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowAbout windowAbout = WindowAbout.GetInstance();
+            windowAbout.MdiParent = this;
+            windowAbout.WindowState = FormWindowState.Normal;
+            windowAbout.Show();
+        }
+
+        private void updateDeveloperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowUpdateDev windowUpdateDev = WindowUpdateDev.GetInstance();
+            windowUpdateDev.MdiParent = this;
+            windowUpdateDev.WindowState = FormWindowState.Normal;
+            windowUpdateDev.Show();
+        }
+
+        private void updateProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowUpdateProj windowUpdateProj = WindowUpdateProj.GetInstance();
+            windowUpdateProj.MdiParent = this;
+            windowUpdateProj.WindowState = FormWindowState.Normal;
+            windowUpdateProj.Show();
+        }
+
+        private void updateAllocationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowUpdateAllocation windowUpdateAllocation = WindowUpdateAllocation.GetInstance();
+            windowUpdateAllocation.MdiParent = this;
+            windowUpdateAllocation.WindowState = FormWindowState.Normal;
+            windowUpdateAllocation.Show();
+        }
+
+        private void registerTaskToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WindowTasks windowTasks = WindowTasks.GetInstance();
             windowTasks.MdiParent = this;
@@ -84,12 +118,12 @@ namespace Developer_Allocation_Management
             windowTasks.Show();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void myTasksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WindowAbout windowAbout = WindowAbout.GetInstance();
-            windowAbout.MdiParent = this;
-            windowAbout.WindowState = FormWindowState.Normal;
-            windowAbout.Show();
+            WindowMyTasks windowMyTasks = WindowMyTasks.GetInstance();
+            windowMyTasks.MdiParent = this;
+            windowMyTasks.WindowState = FormWindowState.Normal;
+            windowMyTasks.Show();
         }
     }
 }

@@ -42,94 +42,95 @@
             this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
             this.btnRegister = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.cbbLevel = new System.Windows.Forms.ComboBox();
-            this.chkActive = new System.Windows.Forms.CheckBox();
             this.chkAdmin = new System.Windows.Forms.CheckBox();
+            this.chkActive = new System.Windows.Forms.CheckBox();
+            this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(130, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(222, 24);
+            this.lblTitle.Size = new System.Drawing.Size(240, 26);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Developer Registration";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(143, 76);
+            this.lblName.Font = new System.Drawing.Font("Montserrat", 9.749999F);
+            this.lblName.Location = new System.Drawing.Point(143, 75);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(50, 16);
+            this.lblName.Size = new System.Drawing.Size(55, 18);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name: ";
             // 
             // lblbirthday
             // 
             this.lblbirthday.AutoSize = true;
-            this.lblbirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbirthday.Location = new System.Drawing.Point(123, 102);
+            this.lblbirthday.Font = new System.Drawing.Font("Montserrat", 9.749999F);
+            this.lblbirthday.Location = new System.Drawing.Point(123, 101);
             this.lblbirthday.Name = "lblbirthday";
-            this.lblbirthday.Size = new System.Drawing.Size(67, 16);
+            this.lblbirthday.Size = new System.Drawing.Size(75, 18);
             this.lblbirthday.TabIndex = 2;
             this.lblbirthday.Text = "Birth Day: ";
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.Location = new System.Drawing.Point(150, 134);
+            this.lblLevel.Font = new System.Drawing.Font("Montserrat", 9.749999F);
+            this.lblLevel.Location = new System.Drawing.Point(150, 128);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(46, 16);
+            this.lblLevel.Size = new System.Drawing.Size(48, 18);
             this.lblLevel.TabIndex = 3;
             this.lblLevel.Text = "Level: ";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(142, 163);
+            this.lblEmail.Font = new System.Drawing.Font("Montserrat", 9.749999F);
+            this.lblEmail.Location = new System.Drawing.Point(142, 160);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 16);
+            this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 4;
             this.lblEmail.Text = "E-mail: ";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(122, 189);
+            this.lblPassword.Font = new System.Drawing.Font("Montserrat", 9.749999F);
+            this.lblPassword.Location = new System.Drawing.Point(122, 186);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(73, 16);
+            this.lblPassword.Size = new System.Drawing.Size(76, 18);
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Password: ";
             // 
             // lblActive
             // 
             this.lblActive.AutoSize = true;
-            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(143, 215);
+            this.lblActive.Font = new System.Drawing.Font("Montserrat", 9.749999F);
+            this.lblActive.Location = new System.Drawing.Point(145, 213);
             this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(50, 16);
+            this.lblActive.Size = new System.Drawing.Size(53, 18);
             this.lblActive.TabIndex = 6;
             this.lblActive.Text = "Active: ";
             // 
             // lblAdministrator
             // 
             this.lblAdministrator.AutoSize = true;
-            this.lblAdministrator.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdministrator.Location = new System.Drawing.Point(96, 239);
+            this.lblAdministrator.Font = new System.Drawing.Font("Montserrat", 9.749999F);
+            this.lblAdministrator.Location = new System.Drawing.Point(96, 237);
             this.lblAdministrator.Name = "lblAdministrator";
-            this.lblAdministrator.Size = new System.Drawing.Size(91, 16);
+            this.lblAdministrator.Size = new System.Drawing.Size(102, 18);
             this.lblAdministrator.TabIndex = 7;
             this.lblAdministrator.Text = "Administrator: ";
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(204, 71);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(156, 22);
@@ -137,6 +138,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(204, 184);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(156, 22);
@@ -144,6 +146,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(204, 158);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(156, 22);
@@ -151,6 +154,7 @@
             // 
             // dtpBirthDay
             // 
+            this.dtpBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthDay.Location = new System.Drawing.Point(204, 97);
             this.dtpBirthDay.Name = "dtpBirthDay";
             this.dtpBirthDay.Size = new System.Drawing.Size(156, 22);
@@ -159,7 +163,7 @@
             // btnRegister
             // 
             this.btnRegister.Enabled = false;
-            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Location = new System.Drawing.Point(213, 274);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
@@ -192,15 +196,14 @@
             this.pnlMain.Size = new System.Drawing.Size(509, 324);
             this.pnlMain.TabIndex = 21;
             // 
-            // cbbLevel
+            // chkAdmin
             // 
-            this.cbbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbLevel.FormattingEnabled = true;
-            this.cbbLevel.Location = new System.Drawing.Point(204, 126);
-            this.cbbLevel.Name = "cbbLevel";
-            this.cbbLevel.Size = new System.Drawing.Size(156, 24);
-            this.cbbLevel.TabIndex = 2;
-            this.cbbLevel.SelectedIndexChanged += new System.EventHandler(this.cbbLevel_SelectedIndexChanged);
+            this.chkAdmin.AutoSize = true;
+            this.chkAdmin.Location = new System.Drawing.Point(204, 241);
+            this.chkAdmin.Name = "chkAdmin";
+            this.chkAdmin.Size = new System.Drawing.Size(15, 14);
+            this.chkAdmin.TabIndex = 11;
+            this.chkAdmin.UseVisualStyleBackColor = true;
             // 
             // chkActive
             // 
@@ -211,14 +214,16 @@
             this.chkActive.TabIndex = 10;
             this.chkActive.UseVisualStyleBackColor = true;
             // 
-            // chkAdmin
+            // cbbLevel
             // 
-            this.chkAdmin.AutoSize = true;
-            this.chkAdmin.Location = new System.Drawing.Point(204, 241);
-            this.chkAdmin.Name = "chkAdmin";
-            this.chkAdmin.Size = new System.Drawing.Size(15, 14);
-            this.chkAdmin.TabIndex = 11;
-            this.chkAdmin.UseVisualStyleBackColor = true;
+            this.cbbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLevel.FormattingEnabled = true;
+            this.cbbLevel.Location = new System.Drawing.Point(204, 126);
+            this.cbbLevel.Name = "cbbLevel";
+            this.cbbLevel.Size = new System.Drawing.Size(156, 24);
+            this.cbbLevel.TabIndex = 2;
+            this.cbbLevel.SelectedIndexChanged += new System.EventHandler(this.cbbLevel_SelectedIndexChanged);
             // 
             // WindowRegisterDev
             // 

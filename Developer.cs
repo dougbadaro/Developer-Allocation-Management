@@ -51,7 +51,6 @@ namespace Developer_Allocation_Management
 
         public override string ToString()
         {
-
             return $"{Name}";
         }
     }

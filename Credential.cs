@@ -57,6 +57,13 @@ namespace Developer_Allocation_Management
             Administrator = administrator;
         }
 
+        public override string ToString()
+        {
+            return $"{Email}";
+        }
+
+
+
 
         #region Hashing
         //public static String ComputeSHA256(String input)

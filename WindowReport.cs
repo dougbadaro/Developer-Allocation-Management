@@ -30,7 +30,15 @@ namespace Developer_Allocation_Management
         private void rbtnDeveloper_CheckedChanged(object sender, EventArgs e)
         {
             dgvSearch.DataSource = DeveloperRepository.FindAll();
-
+            try
+            {
+                dgvSearch.AutoGenerateColumns = false;
+                dgvSearch.Columns.Remove("LetterLevel");
+            }
+            catch
+            {
+                dgvSearch.AutoGenerateColumns = true;
+            }
         }
 
         private void rbtnProject_CheckedChanged(object sender, EventArgs e)
@@ -41,6 +49,26 @@ namespace Developer_Allocation_Management
         private void rdbAllocation_CheckedChanged(object sender, EventArgs e)
         {
             dgvSearch.DataSource = AllocationRepository.FindAll();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (rdbDeveloper.Checked)
+                dgvSearch.DataSource = DeveloperRepository.FindByPartialName(txtSearch.Text);
+            if (rdbProject.Checked)
+                dgvSearch.DataSource = ProjectRepository.FindByPartialName(txtSearch.Text);
+            if(rdbAllocation.Checked)
+                dgvSearch.DataSource = AllocationRepository.FindByDevProj(txtSearch.Text);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            if (rdbDeveloper.Checked)
+                dgvSearch.DataSource = DeveloperRepository.FindByPartialName(txtSearch.Text);
+            if (rdbProject.Checked)
+                dgvSearch.DataSource = ProjectRepository.FindByPartialName(txtSearch.Text);
+            if (rdbAllocation.Checked)
+                dgvSearch.DataSource = AllocationRepository.FindByDevProj(txtSearch.Text);
         }
     }
 }

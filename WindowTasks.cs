@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 
 namespace Developer_Allocation_Management
 {
@@ -21,13 +22,8 @@ namespace Developer_Allocation_Management
         private WindowTasks(Allocation createdAllocation) : this()
         {
             _preAllocation = true;
-            txtAllocation.Text = $"{createdAllocation.Id}";
-
-            List<Allocation> list = new List<Allocation>
-                {
-                    AllocationRepository.FindById(createdAllocation.Id)
-                };
-            lstAllocation.DataSource = list;
+            txtProject.Text = $"{createdAllocation.Project.Name}";
+            txtDeveloper.Text = $"{createdAllocation.Developer.Id}";
         }
         public static WindowTasks GetInstance()
         {
@@ -48,27 +44,43 @@ namespace Developer_Allocation_Management
             return _instance;
         }
 
-        private void txtAllocation_TextChanged(object sender, EventArgs e)
+        private void txtProject_TextChanged(object sender, EventArgs e)
+        {
+            lstProjects.DataSource = ProjectRepository.FindByPartialName(txtDeveloper.Text);
+        }
+
+        private void lstProjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstDevelopers.DataSource = AllocationRepository.FindByProject((Project)lstProjects.SelectedItem);
+
+            Allocation allocation = (Allocation)lstDevelopers.SelectedItem;
+            lstTasks.DataSource = AllocationRepository.GetTasks(allocation.Id);
+        }
+
+        private void txtDeveloper_TextChanged(object sender, EventArgs e)
         {
             if (!_preAllocation)
             {
-                lstAllocation.DataSource = AllocationRepository.FindByDevProj(txtAllocation.Text);
+                lstDevelopers.DataSource = AllocationRepository.FindByProject((Project)lstProjects.SelectedItem);
             }
             else
             {
+                List<Developer> list = new List<Developer>();
+                list.Add(DeveloperRepository.FindByIdEProject(Convert.ToInt64(txtDeveloper.Text), (Project)lstProjects.SelectedItem));
+                lstDevelopers.DataSource = list;
                 _preAllocation = false;
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtAllocation.Text))
+            if (!string.IsNullOrEmpty(txtProject.Text))
             {
-                Allocation allocation = (Allocation)lstAllocation.SelectedItem;
+                Allocation allocation = (Allocation)lstDevelopers.SelectedItem;
                 Task task = new Task(txtTask.Text);
-                AllocationRepository.AddTask(allocation, task);
 
-                lstTask.DataSource = AllocationRepository.GetTasks(allocation.Id);
+                AllocationRepository.AddTask(allocation, task);
+                lstTasks.DataSource = AllocationRepository.GetTasks(allocation.Id);
                 txtTask.Text = string.Empty;
             }
             else
@@ -77,10 +89,33 @@ namespace Developer_Allocation_Management
             }
         }
 
-        private void lstAllocation_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstDevelopers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Allocation allocation = (Allocation)lstAllocation.SelectedItem;
-            lstTask.DataSource = AllocationRepository.GetTasks(allocation.Id);
+            Allocation allocation = (Allocation)lstDevelopers.SelectedItem;
+            lstTasks.DataSource = AllocationRepository.GetTasks(allocation.Id);
         }
+
+        private void lstTasks_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int index = lstTasks.IndexFromPoint(e.Location);
+                if (index != -1)
+                {
+                    lstTasks.SelectedIndex = index;
+
+                    Point locationOnForm = lstTasks.PointToScreen(e.Location);
+                    contextMenuStrip1.Show(locationOnForm);
+                }
+            }
+        }
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllocationRepository.RemoveTask((Task)lstTasks.SelectedItem);
+
+            Allocation allocation = (Allocation)lstDevelopers.SelectedItem;
+            lstTasks.DataSource = AllocationRepository.GetTasks(allocation.Id);
+        }
+
     }
 }

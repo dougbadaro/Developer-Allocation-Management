@@ -32,7 +32,6 @@ namespace Developer_Allocation_Management
                     }
 
                     dbContext.SaveChanges();
-                    Console.WriteLine(dbContext.ChangeTracker);
 
                 }
             }
@@ -47,7 +46,10 @@ namespace Developer_Allocation_Management
             {
                 using (Repository dbContext = new Repository())
                 {
-                    return dbContext.Allocations.ToList();
+                    return dbContext.Allocations
+                        .Include(a => a.Developer)
+                        .Include(a => a.Project)
+                        .ToList();
                 }
             }
             catch (Exception)
@@ -72,17 +74,17 @@ namespace Developer_Allocation_Management
                 throw;
             }
         }
-        public static Allocation FindById(Int64 allocation)
+        public static void RemoveTask(Task task)
         {
             try
             {
                 using (Repository dbContext = new Repository())
                 {
-                    //Na linha abaixo, utilizo o Include de Developer e Project para poder utilizá-los em seu ToString()
-                    return dbContext.Allocations.Include(a => a.Developer).Include(a => a.Project).FirstOrDefault(a => a.Id == allocation);
+                    dbContext.Entry(task).State = EntityState.Deleted;
+                    dbContext.SaveChanges();
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -117,6 +119,55 @@ namespace Developer_Allocation_Management
                 }
             }
             catch
+            {
+                throw;
+            }
+        }
+        public static List<Task> GetTaskByIdDeveloper(Int64 id)
+        {
+            try
+            {
+                using(Repository dbContext = new Repository())
+                {
+                    return dbContext.Allocations.Include(a => a.Developer)
+                                                .Where(a => a.Developer.Id == id)
+                                                .Select(a => a.Tasks)
+                                                .FirstOrDefault()
+                                                .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static List<Allocation> FindByProject(Project project)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Allocations.Include(a => a.Developer)
+                                                .Include(a => a.Project)
+                                                .Where(a => a.Project.Id == project.Id)
+                                                .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static List<Allocation> FindForDate(Project project, Developer developer)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Allocations.Include(a => a.Project).Where(a => a.Project.Id == project.Id && a.Developer.Id == developer.Id).ToList();
+                }
+            }
+            catch (Exception)
             {
                 throw;
             }
