@@ -158,6 +158,24 @@ namespace Developer_Allocation_Management
                 throw;
             }
         }
+        public static List<Allocation> FindByDeveloper(string partialName, Project project)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Allocations.Include(a => a.Developer)
+                                                .Include(a => a.Project)
+                                                .Where(a => a.Project.Id == project.Id)
+                                                .Where(a => a.Developer.Name.Contains(partialName))
+                                                .ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public static List<Allocation> FindForDate(Project project, Developer developer)
         {
             try

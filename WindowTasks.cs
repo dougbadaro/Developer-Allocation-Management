@@ -61,7 +61,7 @@ namespace Developer_Allocation_Management
         {
             if (!_preAllocation)
             {
-                lstDevelopers.DataSource = AllocationRepository.FindByProject((Project)lstProjects.SelectedItem);
+                lstDevelopers.DataSource = AllocationRepository.FindByDeveloper(txtDeveloper.Text, (Project)lstProjects.SelectedItem);
             }
             else
             {
