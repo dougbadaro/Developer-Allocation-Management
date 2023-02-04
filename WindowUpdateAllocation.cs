@@ -81,7 +81,7 @@ namespace Developer_Allocation_Management
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (lstAllocation.SelectedIndex < 0)
+            if (lstAllocation.SelectedIndex < -1)
             {
                 if (nmrHours.Value > 0 && txtRemuneration.Text != string.Empty)
                 {

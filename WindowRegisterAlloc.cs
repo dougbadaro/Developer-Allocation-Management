@@ -15,7 +15,6 @@ namespace Developer_Allocation_Management
     public partial class WindowRegisterAlloc : Form
     {
         private static WindowRegisterAlloc _instance;
-        private Boolean _exist = false;
 
         public static WindowRegisterAlloc GetInstance()
         {
@@ -90,25 +89,11 @@ namespace Developer_Allocation_Management
 
                     Allocation allocation = new Allocation(dtpStart.Value.Date, dtpTermination.Value.Date, Convert.ToByte(nmrHours.Value), Convert.ToDecimal(txtRemuneration.Text), dev, proj);
 
-                    List<Allocation> allocations = AllocationRepository.FindForDate((Project)lstProject.SelectedItem, (Developer)lstDeveloper.SelectedItem);
-                    foreach(Allocation findAllocation in allocations)
-                    {
-                        if (findAllocation.Termination.Date >= dtpStart.Value.Date && dtpTermination.Value.Date <= findAllocation.Start.Date)
-                        {
-                            _exist = true;
-                        }
-                    }
-                    if (_exist == false)
-                    {
-                        AllocationRepository.Save(allocation);
-                        Sucesseful_AddTask(sender, e, allocation);
-                        Clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("There is already an allocation in progress.");
-                    }
-                    
+
+                    AllocationRepository.Save(allocation);
+                    Sucesseful_AddTask(sender, e, allocation);
+                    Clear();
+
                 }
                 else
                 {

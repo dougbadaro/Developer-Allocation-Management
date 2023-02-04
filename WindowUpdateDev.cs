@@ -60,8 +60,8 @@ namespace Developer_Allocation_Management
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (lstDevelopers.SelectedIndex > 0)
-            {
+            if (lstDevelopers.SelectedIndex > -1)
+            {   
                 if(txtName.Text != string.Empty && cbxLevel.SelectedIndex > 0 && txtEmail.Text != string.Empty)
                 {
                     Developer developer = (Developer)lstDevelopers.SelectedItem;

@@ -44,7 +44,7 @@ namespace Developer_Allocation_Management
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (lstProjects.SelectedIndex < 0)
+            if (lstProjects.SelectedIndex < -1)
             {
                 if (txtName.Text != string.Empty)
                 {
